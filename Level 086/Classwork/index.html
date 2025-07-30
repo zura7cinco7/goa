@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1) მომხარებელს შემოატანინეთ ასაკი. შექმენით ცვლადი isAdult და ტერნარი ოპერატორის გამოყენებით შეინახეთ მასში true, თუ ასაკი მეტია 18-ზე, სხვა შემთხვევაში false*/
+        let userInfo = prompt('Enter your age:');
+        let isAdult = userInfo > 18 ? true: false
+        /*2) მომხარებელს შემოატანინეთ სახელი, შემდეგ პაროლი და თუ მისი სიგრძე(სიმბოლოების რაოდენობა) 
+        ნაკლებია 4-ზე დაბეჭდეთ "Password is too short, სხვა შემთხვევაში "Wellcome {user}"*/
+         let userName = prompt('Enter your name:');
+         let userPassword = prompt('Enter your password:');
+         if(userPassword.length < 4){
+            console.log('Password is too short')
+         }else{
+            console.log(`Welome ${userName}`)
+         }
+         /*3) მომხარებელს შემოატანინეთ current weather if, else if, else-ის მეშვეობით მოიფიქრე და დაბეჭდე ნებისმიერი ტექსტი შემოტანილ მნიშვნელობაზე დაყრდნობით. 
+        გამოიყენეთ ტერნარი ოპერატორი
+
+        მაგალითად: 
+        თუ მზიანი ამინდია, დაბეჭდე "ვივარჯიშებ"(მსგავსი ტექსტი)
+
+        სულ უნდა გქონდეთ 4 პირობის შემოწმება. თუ არც-ერთი პირობა არ შესრულდა მაშინ დაბეჭდე "დავრჩები სახლში"*/
+
+        let CurrentWeather = prompt("Enter the Current Weather that is outside:");
+        if(CurrentWeather == 'Sunny'){
+            console.log('Wear a hat');
+        }else if(CurrentWeather == 'Cold'){
+            console.log('Wear a Jacket')
+        }else if(CurrentWeather == 'Not Cold Not Sunny'){
+            console.log('Go outside for a walk')
+        }else{
+            console.log('Stay at home')
+        }
+
+        //4) switch-ის გამოყენებით გააკეთეთ მე-3 დავალება და დაუმატეთ რამოდენიმე პირობა//
+        let UserWeather = prompt('Write current Weater:');
+        switch(UserWeather){
+            case 'Sunny Day':
+                console.log('Wear a hat');
+                break;
+            case 'Cold':
+                console.log('Wear a Jacket');
+                break;
+            case 'Not Cold Not Sunny':
+                console.log('Go outside for a walk');
+                break;
+            default:
+                console.log('Stay at home');
+                break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 1200px;
+    height: 1200px;
+    border: 5px solid black;
+}
+
+section:nth-child(1){
+    background-color:black;
+    color:white
+}
+
+section:nth-child(2){
+    background-color: red;
+    color:white;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+section:nth-child(3){
+    background-color: blue;
+    color:white;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+section:nth-child(4){
+    background-color: gray;
+    color:white;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+section:nth-child(5){
+    background-color:lightblue;
+
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+section:nth-child(6){
+    background-color: green;
+
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+section:nth-child(7){
+    background-color: yellow;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+

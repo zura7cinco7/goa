@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="AddProductId">Add The Product</button>
+    <button id="DeleteProductId">Delete Product</button>
+
+    <table id="Table" border="1">
+        <thead>
+            <tr>
+                <th>Name Of The Product</th>
+                <th>Quantity of the Product</th>
+                <th>Price of the Product</th>
+                <th>Id of the Product</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <p>Total Price : 0</p>
+    <script>
+        // განიხილეთ ეს კოდი დადააკომენტარეთ სად რა ხდება
+        const btn = document.querySelector("#AddProductId"); // იქმნება ცვლადი const ით რომელიც იღებს წვდომას ღილაკზე
+        const btnDelete = document.querySelector("#DeleteProductId"); // იქმნება ცვლადი const ით რომელიც იღებს წვდობას წაშლის ღილაკზე #DeleteProductId
+        const tbody = document.querySelector("tbody"); // იქმნება ცვლადი const ით რომელიც იღებს წვდომას tbody ზე
+        const p = document.querySelector("p"); // იქმნება ცვლადი const ით რომელიც იღებს წვდომას paragraph ზე
+
+        let products = []; // იქმნება ახალი მასივი სადაც ჩაემატება ყველა პროდუქტი
+        let idCounter = 1; // იქმნება ახალი ცვლადი let ით სადაც ინახება 1 რომელიც მისცემს რიცხვს უნიკალურ Id ს 1 იდან იმ რიცხვის ჩათვლით რამდენი 
+        // პროდუქტიც დაემატება სიაში და ცხრილში
+        
+        const createTr = (productName, productQuantity, productPrice,productId) => { // იქმნება ახალი ფუნქცია რომელიც არგუმენტად იღებს ოთხ პარამეტრს productName - 
+        // პროდუქტის სახელი productQuantity- პროდუქტის რაოდენობა productPrice - პროდუქტის ფასი productId - პროდუქტის უნიკალური Id
+            const newTr = document.createElement("tr"); // იქმნება ახალი ცხრილის რიგი რომელიც ინახება ცვლადში რომელიც არის შექმნილია const ით 
+            
+            const nameTd = document.createElement("td"); // იქმნება ახალი ცხრილის რიგისთვის მონაცემი იგივე table data - td
+            nameTd.textContent = productName; // ახალი შექმნილი ცხრილის მონაცემის მნიშვნელობა textContent ი უნდრის პროდუქტის სახელს რადგან პირველი
+            // რიგის სახელი შეიცავს პროდუქტის სახელს
+
+            const quantityTd = document.createElement("td"); // იქმნება მეორე ცხრილის რიგისთვის მონაცემი იგივე table data - td
+            quantityTd.textContent = productQuantity; // რომელიც უტოლდება უკვე პროდუქტის რაოდენობას productQuantity რადაგან მეორე რიგის სახელი შეიცავს პროდუქტის
+            // რაოდენობას
+
+            const priceTd = document.createElement("td"); // იქმნება მესამე ცხრილის რიგისთვის მონაცემი იგივე table data - td
+            priceTd.textContent = productPrice; // რომელიც უტოლდება პროდუქტის ფასს productPrice რადაგან მესამე რიგის სახელი შეიცავს პროდუქტის
+            // ფასს
+            
+            // 2) წინა პროექტს დაამატეთ რამდენიმე ფუნქცია, პირველი როდესაც პროდუქტის ხდება, ავტომატურად ობიეტში დაამატეთ  id კუთვნილება რომელიც 
+            // უნდა იყოს უნიკალური და ცხრილშიც უნდა ჩანდეს, აგრეთვე უნდა გქონდეთ წაშლის ღილაკი, რომელზეც დაკლკიების შედგად მომხმარებელმა უნდა 
+            // შემოიტანოს პროდუქტის ID რომლის წაშლაც სურს, თუ id არ მოიძებნება პროდუქტების მასივში მაშინ ალერტით უთხარით რომ არასწორია, 
+            // თუ მოიძებნა მაშინ წაშალეთ მასივიდანაც და ცხრილიდან კონკრეტული პროდუქტი რომლის id იც შემოიტანა მომხმარებელმა
+            const idTd = document.createElement("td"); // იქმნება მეოთხე რიგისთვის მონაცემი იგივე table data - td 
+            idTd.textContent = productId;// რომელიც უტოლდება პროდუქტის უნიკალურ Id ს 
+            // რადგან მეოთხე რიგის სახელი შეიცავს პროდუქტის უნიკალურ Id ს
+
+            newTr.appendChild(nameTd); // ახალ შექმნილ რიგებში ემატება შვილი ელემენტი td იგივე ამ რიგის მონაცემები პირველ რიგში ემატება nameTd ცვლადში შენახული 
+            // ინფორმაცია
+            newTr.appendChild(quantityTd); // მეორე რიგში ემატება quantityTd ცვლადში შენახული ინფორმაცია
+            newTr.appendChild(priceTd); // მესამე რიგში ემატება priceTd - პროდუქტის ფასი ცვლადში შენახილი ინფორმაცია
+            newTr.appendChild(idTd); // მეოთხე რიგში ემატება idTd - პროდუქტის უნიკალური Id ცვლადში შენახული ინფორმაცია
+
+            return newTr; // საბოლოოდ ბრუნდება განახლებული ცხრილის რიგები tr
+        };
+
+        btn.addEventListener("click", () => { // button ი ამატებს მასზე მოვლენის მსმენელს და click ებას
+            const productName = prompt("Please enter product name"); // უკვე ამ ღილაკზე დაჭერისას მომხმარებელს შემოაქვს ამ პროდუქტის სახელი
+            const productQuantity = parseInt(prompt("Please enter product quantity")); // ამ პროდუქტის რაოდენობა
+            const productPrice = parseFloat(prompt("Please enter product price")); // და ამ პროდუქტის ღირებულება (ფასი)
+            const productId = idCounter++ // შეიქმნა ახალი ცვლადი productId რომელიც გაუტოლდა idCounter რომელიც იზრდება 1 - ით
+
+            products.push({productName, productQuantity, productPrice,productId}); // ჩვენ შექმნილ მასივში ვამატებთ პროდუქტის სახელს პროდუქტის რაოდენობას 
+            //  პროდუქტის ფასს და პროდუქტის უნიკალურ Id ს 
+
+            if(productName.length === 0 || !productQuantity || !productPrice){ // ამის შემდეგ უკვე ვამოწმებთ თუ მომხმარებლის მიერ შემოტანილი პროდუქტის სახელის 
+                // მნიშვნელობის სიგრძე === უდრის 0 ს ან არ არის შემოტანილი productQuantity იგივე პროდუქტის რაოდენობა ან არ არის შემოტანილი productPrice იგივე 
+                // პროდუქტის ფასი მაშინ ჩვენ მომხმარებელს 
+                alert("Please fill all fields"); // alert ის მეშვეობით ვგზავნით message ის რომ შეავსოს ყველა ცარიელი ველი
+                return; // საბოლოოდ ჩვენ აქ ვაჩერებთ ამ ფუნქციას რადგან არ მოხდეს რაიმეს შეცვლა ან ზედმეტი რამის დამატება საიტზე
+            }
+            const totalPrice = products.reduce((prev, cur) => prev + cur.productPrice * cur.productQuantity, 0); // აქ უკვე ჩვენ ვითვლით საბოლოო პროდუქტის ფასს
+            // ჩვენ ვიყენებთ reduce method ს პროდუქტების მასივზე 
+            // ჩვენ ვიყენებთ reduce ს მეთოდს როცა გვინდა რომ მაგალითად გამოვითვალოდ რიცხვების ჯამი 
+            // და ვიყენებთ მათემატიკური ოპერაციების დროს
+            p.textContent = `Total Price: ${totalPrice}`;
+            // ჩვენი paragraph ის textContent ი იგივე ტექსტის შიგთავსი რომელიც თავიდან იყო 0 გახდა ჩვენ მიერ გამოთვლილი საბოლოო პროდუქტის ჯამის მნიშვნელობა
+            tbody.appendChild(createTr(productName, productQuantity, productPrice,productId)) // საბოლოოდ კი ჩვენ ვამატებთ ყველაფერს tbody თეგში
+        });
+
+        DeleteProductId.addEventListener("click", () => { // ვქმნით ახალ ფუნქციას რომელიც წაშლის რაიმე პროდუქტს სიიდან ან თუნდაც ობიექტიდან ღილაკზე დაჭერისას
+        // DeleteProductId მასზე ამატებს მოვლენის მსმენელს და click ებას
+        const id = parseInt(prompt("Enter product Id to delete the product")); // იქმნება ახალი ცვლადი const ით რომელიც მომხმარებელს ეუბნება რომ შემოიტანოს
+        // პროდუქტის უნიკალური Id რომელიც აქვს მინიჭებული პროდუქტს
+        for (let i = 0; i < tbody.rows.length; i++) { // ხდება for loop ით გადავლა tbody.rows tbody ში არსებულ რიგებზე
+            const cells = tbody.rows[i].getElementsByTagName("td"); // იქმნება ახალი ცვლადი const ით რომელიც ინახავს tbody.rows[i] tbody ში არსებულ რიგებს და 
+            // იღებს წვდობას მათზე
+            const rowId = parseInt(cells[cells.length - 1].textContent); // იქმნება ახალი ცვლადი const ით რომელიც იღებს ბოლო პროდუქტს cells სიაში 
+            // textContent კი ცვლის ტექსტის შიგტავსს საბოლოოდ parseInt ყველაფერს გარდაქმნის რიცხვად
+            
+            if (rowId === id) { // ხდება შემოწმება თუ rowId === უდრის უნიკალური Id ის მნიშვნელობას
+                tbody.deleteRow(i); // მაშინ tbody იდან იშლება კონკრეტული პროდუქტი თავისი Id ით
+                products = products.filter(product => product.productId !== id); // products.filter ქმნის ახალ მასივს რომელიც ინახავს ისეთ პროდუქტებს რომლის 
+                // პროდუქტის Id იც არ ემთხვევა id ს 
+                const totalPrice = products.reduce((prev, cur) => prev + cur.productPrice * cur.productQuantity, 0); // აქ ჩვენ უკვე ვითვლით საბოლოო ფასს 
+                // პროდუქტების თუ კონკრეტული პროდუქტი წაიშალა თავისი უნიკალური Id ის დახმარებით მაშინ ფასი ავტომატურად იკლებს სხვა შემთხვევაში თუ
+                // ყველა პროდუქტი წაიშალა მაშინ ავტომატურად ფასი ხდება 0 ის ტოლი
+                p.textContent = `Total Price : ${totalPrice}`; // ამავდროულად იცვლება paragraph ის ტექსტის შიგთავსიც textContent
+                return; // საბოლოოდ აქ აჩერებს return ი ფუნქციას რადგან არ მოხდეს ზედმეტი რამის დამატება საიტზე
+            }
+        }
+
+        alert("ID not found!"); // თუ პროდუქტის Id ვერ მოიძებნა მაშინ მომხმარებელს ვუგზავნით message ს "ID not found!" პროდუქტის Id ვერ მოიძებნა
+    });
+    </script>
+</body>
+</html>

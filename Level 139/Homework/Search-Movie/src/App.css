@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+
+.logo{
+  width: 150px;
+  padding-right: 20px;
+}
+
+.movieDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+form{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  gap: 30px;
+  position: fixed;
+}
+
+input{
+  width: 560px;
+  background-color: none;
+  border:none;
+  outline: none;
+}
+
+.inputDiv{
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.searchImg{
+  width:20px
+}
+
+.searchImgDiv{
+  padding-right: 10px;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+  padding-right: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.movieImg{
+  height: 414px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.plotP{
+  width: 636px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#movieMainInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.p1{
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.p1 span{
+  color: #5799EF;
+  font-weight: 600;
+}
+
+.p1 span:hover{
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.miniInfoAboutMovie{
+  display: flex;
+  flex-direction: row;
+  gap:30px
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2{
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+  font-size: 34px;
+}
+
+.movieInfoP{
+  font-family: "Open Sans", sans-serif;
+}
+
+.collage{
+  width: 100%;
+}
+
+.mainImgCollage{
+  position: relative;
+}
+
+.movieMosaic{
+  position: absolute;
+  top:300px;
+  left:150px
+}
+
+.movieMosaic h2{
+  font-size: 50px;
+  font-family: "Open Sans", sans-serif;
+  color:white;
+}
+
+.movieMosaic p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color:white;
+}
+
+.movieMosaic button{
+  background-color: #B9820B;
+  padding: 15px;
+  border:none;
+  color:white;
+  border-radius: 30px;
+  width:150px;
+}
+
+.noMoviesFound .noMoviesFoundP{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}

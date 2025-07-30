@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(221, 100%, 96%);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+
+
+.div-1{
+    background-color: white;
+    width:400px;
+    height:200px;
+    border-radius: 20px;
+    padding-left: 20px;
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mainparagraph{
+    font-size: 30px;
+}
+
+#mainbutton{
+    width:170px;
+    background-color: #6340FB;
+    padding: 15px;
+    border:none;
+    border-radius: 20px;
+    color:rgb(232, 232, 232)
+}
+
+#mainbutton:active{
+    background-color: transparent;
+    border:1px solid #6340FB;
+    color:black;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.div-2{
+    background-color: white;
+    width:400px;
+    height:200px;
+    border-radius: 20px;
+    padding-left: 20px;
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#paragraph{
+    font-size: 30px;
+}
+
+#btn{
+    width:180px;
+    background-color: #6340FB;
+    padding: 15px;
+    border:none;
+    border-radius: 20px;
+    color:rgb(232, 232, 232)
+}
+
+#btn:active{
+    background-color: transparent;
+    border:1px solid #6340FB;
+    color:black;
+    font-weight: 500;
+    transition: 0.25s;
+}

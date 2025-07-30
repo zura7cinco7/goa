@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- შექმენით ერთი ღილაკი და დაუმატეთ მოვლენის მსმენელი. ამ ღილაკზე დაკლიკებისას კონსოლში გამოიტანეთ თქვენი სახელი -->
+    <button onclick="console.log('Nino')">Name</button>
+    <script>
+        /* 1) შექმენით ფუნქცია, მასში შექმენით ცლვადი, იგივე ფუნქციაში შექმენით კიდევ ერთი ფუნქცია. ამ ფუნქციაში უნდა შექმენათ კიდევ ერთი ცვლადი და ორივე შექმენილი ცვლადი გამოიტანოთ კონსოლში.
+        საბოლოოდ გამოიძახეთ შვილი ფუნქცია მშობელში და გამოიძახეთ თვითონ მშობელი ფუნქცია.*/
+        function greet(){
+            let name = 'Nino';
+            function lastname(){
+                let userlastname = 'Gvinjilia';
+                console.log(userlastname);
+            }
+            console.log(name);
+            lastname();
+        }
+
+        greet();
+    </script>
+</body>
+</html>

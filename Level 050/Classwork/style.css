@@ -1,0 +1,22 @@
+a{
+    color:red;
+    text-decoration: none;
+}
+
+a:link{
+    color:red;
+    text-decoration: none;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color:green;
+    text-decoration:black underline;
+}
+
+a:active{
+    color:black
+}

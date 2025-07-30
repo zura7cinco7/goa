@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hello world!</p>
+    <p class="p2">Hello World!</p>
+    <p>This is My Name</p>
+    <!-- 1) შექმენიტ html ფაილი სადაც გექნებათ 3 პარაგრაფი, აირჩიეთ პირველი პარაგრაფი და შეცვალეთ მისი ტექსტის შიგთავსი და მისი id, მეორე პარაგრაფში შეცვალეთ 
+    მისი უკანაფერი და class, ხოლო მესამე პარაგრაფში დაამატეთ b თეგი ხოლო b თეგში კი რაიმე ტექსტი -->
+    <script>
+
+        const p1 = document.body.children[0];
+        p1.textContent = 'Hi';
+        p1.id = 'paragraph1';
+
+        const p2 = document.body.children[1];
+        p2.style.backgroundColor  = 'red'
+        p2.className = 'paragraph2'
+
+        const p3 = document.body.children[2];
+        p3.innerHTML = 'This is my Name <b> Nino </b>'
+
+
+        // 2) მოიძიეთ querySelector შესახებ გააკეთეთ სამი მაგალითი მისი გამოყენების მაგალითად: წამოიღე ელემენტი აიდის მეშვეობით, 
+        // წამოიღე ელემენტი კლასის და წამოიღე ელემენტი თეგის სახელის მეშვეობით, აუცილებელია მხოლოდ გამოიყენოთ querySelector, 
+        // შესწავლის შემდეგ გააკეთეთ მისი კოპიო ფუნქცია რომელსაც გადაეცემა ერთი არგუყმენტი პარამეტყრს
+        //  დაარქვიეთ queryWord და მისი მეშვეობით უნდა შეგეძლოთ ან id მქონე ელემენტის წამოღება ან კლასით ან ტეგის სახელით
+
+        document.querySelector('#p1');
+        document.querySelector('.p2');
+        document.querySelector('p');
+
+        const getElementByIdManual = function(id) {
+            const children = document.body.children;
+
+            for(let i = 0; i < children.length; i++){
+                if(children[i].id === id){
+                    return children[i]
+                }
+            }
+
+            return null;
+        }
+        
+
+        const getElementsByClassName = function(className){
+            const children = document.body.children;
+            const elements = []
+
+            for(let i = 0; i < children.length; i++){
+                if(children[i].className === className){
+                    elements.push(children[i])
+                }
+            }
+
+            return elements.length === 1 ? elements[0] : elements;
+        }
+
+        const getElementsByTagName = function(tagName){
+            const children = document.body.children;
+            const elements = []
+
+            for(let i = 0; i < children.length; i++){
+                if(children[i].tagName.toLowerCase() === tagName.toLowerCase()){
+                    elements.push(children[i])
+                }
+            }
+
+            return elements.length === 1 ? elements[0] : elements;
+        }
+
+        const manualQuerySelector = function(searchQuery) {
+            if(searchQuery[0] === "#") {
+                return getElementByIdManual(searchQuery.slice(1))
+            } else if(searchQuery[0] === "."){
+                return getElementsByClassName(searchQuery.slice(1));
+            } else {
+                return getElementsByTagName(searchQuery);
+            }
+        }
+
+        console.log(manualQuerySelector("#paragraph1"));
+        console.log(manualQuerySelector(".paragraph2"));
+        console.log(manualQuerySelector("p"));
+    </script>
+</body>
+</html>

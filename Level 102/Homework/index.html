@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+
+    <h1 class="class1">Hello World!</h1>
+    <h1 class="class1">Hello World!</h1>
+    <h1 class="class1">Hello World!</h1>
+    
+    <script>
+        // 1) კომენტარებით ახსენით რისთვის გამოიყენებიან და როგორ მუშაობენ getElementsByClassName и getElementsByTagNam.
+        // getElementsByClassName და getElementsByTagNam ვიყენებთ ელემენტებზე წვდომის მისაღებად class ის სახლით და Tag Name ის გამოყენებით
+
+        //2) შექმენით 5 პარაგრაფი. მიიღეთ მათზე წვდომა თეგის სახელით. გადაუარეთ მიღებულ html-ის კოლექციას for ციკლით 
+        // და დაუმატეთ თითოეულ პარაგრაფს ღილაკი "Delete", რომელზე დაკლიკებისას პარაგრაფი უნდა წაიშალოს
+
+        const p = document.getElementsByTagName('p')
+
+        for(let i = 0; i < p.length;i++){
+            let button = document.createElement('button');
+            button.textContent = 'Delete';
+
+            button.onclick = function() {
+                p[i].remove()
+            }
+            p[i].appendChild(button);
+        }
+
+        // 3) შექმენით 3 ელემენტი თქვენთვის სასურველი კლასით. მიიღეთ მათზე წვდომა getElementsByClassName-მეთოდის მეშვეობით 
+        // და შეუცვალეთ ტექსტის შიგთავსი მე-2 ელემენტს.
+
+        const ClassNames = document.getElementsByClassName('class1');
+
+        if(ClassNames.length > 1){
+            const secondElement = ClassNames[1];
+            secondElement.textContent = '123'
+        }
+    </script>
+</body>
+</html>

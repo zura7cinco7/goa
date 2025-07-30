@@ -1,0 +1,28 @@
+h1{
+    color:#D8C4B6;
+}
+
+h2{
+    color: #213555;
+}
+
+.class1{
+    color: #213555;
+}
+
+.class2{
+    color:#D8C4B6;
+}
+
+.class3{
+    color:#D8C4B6;
+}
+
+button{
+    color:rgb(33, 53, 85);
+    border: 10px solid rgb(33, 53, 85);
+}
+
+main{
+    background-color:#3E5879;
+}

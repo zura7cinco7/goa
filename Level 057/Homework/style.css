@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width:600px;
+    height: 400px;
+    background-color: white;
+    padding-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-div{
+    padding-left: 30px;
+}
+
+h3{
+    font-family: "Karla", serif;
+    font-weight: 700;
+    color:hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+}
+
+.paragraph1{
+    font-family: "Karla", serif;
+    font-weight: 700;
+    color:hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+}
+
+.paragraph2{
+    font-family: "Karla", serif;
+    color:hsl(218, 22%, 67%);
+}
+
+.paragraph3{
+    font-family:"Karla", serif;
+    color:hsl(218, 22%, 67%);
+    margin-bottom: 40px;
+}
+
+
+.main1-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.info1{
+    background-color:hsl(179, 62%, 43%);
+    width:300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom-left-radius:10px;
+}
+
+.h4-1{
+    font-family:"Karla", serif;
+    font-weight: 700;
+    color:white;
+    padding-top: 35px;
+    margin-bottom: 5px;
+}
+
+.paragraph4{
+    font-family:"Karla", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    display:inline-block
+}
+
+.paragraph5{
+    font-family: "Karla", serif;
+    font-weight:700;
+    color: #52C5C7;
+    display:inline-block;
+    margin-bottom:10px;
+}
+
+.paragraph6{
+    font-family: "Karla", serif;
+    color:white;
+    margin-bottom: 30px;
+}
+
+
+button{
+    font-family: "Karla", serif;
+    background-color: hsl(71, 73%, 54%);
+    width:245px;
+    border:none;
+    border-radius: 5px;
+    padding:10px;
+    font-weight: 700;
+    color:white;
+    margin-bottom: 48px;
+}
+
+.info2{
+    width:300px;
+    padding-left: 30px;
+    background-color: #49BEBD;
+    border-bottom-right-radius:10px;
+}
+
+
+.h4-2{
+    font-family:"Karla", serif;
+    color:white;
+    padding-top: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p{
+    color:#AEECF0;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1) შექმენით ფუნქცია სახელად manualMapObj რომელსაც გადაეცემა ობიექტი და callback ფუნქცია, გამოიყენეთ for in ციკლი რომ იტერაცია მოახდინოთ 
+        ობიექტზე, შემდეგ თითოეულ გასაღებზე მდგომი მნიშვნელობა გადაეცით 
+        callback ფუნქციას და დაბრუნებული მნიშვნელობა შეინახეთ ახალ ობიექტში იგივე გასაღებით (აგრეთვე ახსენით რა არის  pass by refernce) */
+
+        function manualMapObj(object, callback) {
+            const newObj = {};
+            
+            for (const  key in object) {
+                newObj[key] = callback(object[key]);
+            }
+            
+            return newObj;
+        }
+
+        const obj = { 
+            word1: 1, 
+            word2: 2, 
+            word3: 3 
+        };
+        
+        const objTransform = manualMapObj(obj, value => value * 2);
+        console.log(objTransform);
+
+        // pass by reference არის როდესაც შენ რაიმე ფუნქციას გადასცემ ობიექტს ან მასივს და ამით ჩვენ ვაძლევთ მისამართს მათ heap მეხსიერებაში
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //კომენტარებით ახსენით რა არის let და const keyword-ები, რა შემთხვევაში უნდა გამოვიყენოთ თითოეული მათგანი
+        //let - ის გამოყენების დროს შეიძლება მისი ცვლადის მნიშვნელობა შევცვალოთ const - ის გამოყენების დროს ცვლადის მნიშვნელობის შეცვლა არ შეგვიძლია
+        //let keywords - ს ვიყენებთ მაშინ როდესაც ვიცით თუ რამდენჯერ უნდა შევცვალოთ ცვლადის მნიშვნელობა
+        //const keywords - ს ვიყენებთ მაშინ როდესაც გვინდა რომ შევქმნათ ისეთი ცვლადი რომელიც არ შეიცვლება 
+        //კომენტარებით ახსენით რატომ გამოიტანს ეს error-ს:
+        // let num = 5;
+        // let num = 10;
+        //გამოიტანს error ს რადგან let keywords გადაცემული აქვს ერთი და იგივე ცვლადის სახელი
+        // შექმენით ცვლადი სადაც შეინახავთ ქულას(0-დან 100-ის ჩათვლით). თქვენი დავალებაა ქულის მიხედვით დაბეჭდოთ შესაბამისი შეფასება:
+        // 90-100: A
+        // 80-89: B
+        // 70-79: C
+        // 60-69: D
+        // 60-ზე ქვემოთ: F
+        let grade = 40;
+
+        if(grade >= 90){
+            console.log('A')
+        }
+        else if (grade >= 80){
+            console.log('B')
+        }
+        else if(grade >= 70){
+            console.log('C')
+        }
+        else if(grade >= 60){
+            console.log('D')
+        }
+        else{
+            console.log('F')
+        }
+        //გააკეთეთ შედარების ოპერატორებზე 5-5 მაგალითი
+        let num1 = 2;
+        let num2 = 4;
+        console.log(num1 > num2)
+        console.log(num1 < num2)
+        console.log(num2 != num1)
+        console.log(num2 == num1)
+        console.log(num1 >= num2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumDigNthTerm(initVal, patternL, nthTerm) {
+            let sum = initVal;
+            let count = 1;
+            let index = 0;
+            
+            while(count !== nthTerm){
+                sum += patternL[index];
+                index++;
+                if(index === patternL.length){
+                    index = 0;
+                }
+                count++;
+            }
+        
+            let strSum = String(sum);
+            let digitSum = 0;
+        
+            for(let i = 0; i < strSum.length; i++){
+                digitSum += parseInt(strSum[i]);
+            } 
+        
+            return digitSum;
+        }
+    </script>
+</body>
+</html>

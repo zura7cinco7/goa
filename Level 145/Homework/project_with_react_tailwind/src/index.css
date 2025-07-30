@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-purple: hsl(277, 64%, 61%);
+  --color-gray: hsla(0, 0%, 100%, 0.75);
+  --color-blue: hsl(244, 38%, 16%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark_purple: #4c0e70;
+  --color-dark_blue: hsl(233, 47%, 7%);
+  --font-lexend: "Lexend Deca", sans-serif;
+  --font-inter: "Inter", sans-serif; 
+}

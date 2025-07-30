@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*#### 1️⃣ **Custom Sort with Callback**  
+        **Task:** Write a function `sortByAge(arr, callback)` that sorts an array of people objects by age. The callback should define the sorting logic.  
+        **Example Input:**  
+        ```javascript
+        const people = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 17 },
+        { name: "Charlie", age: 30 }
+        ];
+        sortByAge(people, (a, b) => a.age - b.age);
+        ```
+        **Expected Output:** `[ { name: "Bob", age: 17 }, { name: "Alice", age: 25 }, { name: "Charlie", age: 30 } ]`  */
+
+        function sortByAge(arr, callback){
+            arr.sort(callback)
+        }
+        const people = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 17 },
+            { name: "Charlie", age: 30 }
+        ];
+
+        sortByAge(people, (a, b) => a.age - b.age);
+        console.log(people)
+
+        /*#### 2️⃣ **Custom Map Function**  
+        **Task:** Create a function `applyToEach(arr, callback)` that applies a given function to each element in an array and returns a new array.  
+        **Example:**  
+        ```javascript
+        const numbers = [1, 2, 3, 4];
+        const doubled = applyToEach(numbers, num => num * 2);
+        console.log(doubled);
+        ```
+        **Expected Output:** `[2, 4, 6, 8]`  */
+
+        function applyToEach(arr, callback){
+            const result = []
+            for(let i = 0; i< arr.length; i++){
+                result.push(callback(arr[i]))
+            }
+            return result
+        }
+
+        const numbers = [1, 2, 3, 4];
+        const doubled = applyToEach(numbers, num => num * 2);
+        console.log(doubled);
+
+        /*#### 3️⃣ **Custom Filter for Adults**  
+        **Task:** Write a function `filterAdults(arr, callback)` that filters out people under 18 from an array of objects.  
+        **Example:**  
+        ```javascript
+        const filtered = filterAdults(people, person => person.age >= 18);
+        console.log(filtered);
+        ```
+        **Expected Output:** `[ { name: "Alice", age: 25 }, { name: "Charlie", age: 30 } ]` */
+
+        function filterAdults(arr, callback){
+            const result = []
+            for(let i = 0; i < arr.length; i++){
+                if(callback(arr[i])){
+                    result.push(arr[i])
+                }
+            }
+            return result
+        }
+        const filtered = filterAdults(people, person => person.age >= 18);
+        console.log(filtered);
+
+        /*#### 4️⃣ **Custom Reduce: Sum of Ages**  
+        **Task:** Implement `sumAges(arr, callback)` that sums up the ages of all people in an array.  
+        **Example:**  
+        ```javascript
+        const totalAge = sumAges(people, (sum, person) => sum + person.age, 0);
+        console.log(totalAge);
+        ```
+        **Expected Output:** `72`  */
+
+        function sumAges(arr, callback){
+            let sum = 0;
+            for(let i = 0; i < arr.length; i++){
+                sum = callback(sum,arr[i])
+            }
+            return sum
+        }
+
+        const totalAge = sumAges(people, (sum, person) => sum + person.age, 0);
+        console.log(totalAge);
+
+        /*#### 5️⃣ **Find the Oldest Person**  
+        **Task:** Write `findOldest(arr, callback)` that finds the oldest person in the array.  
+        **Example:**  
+        ```javascript
+        const oldest = findOldest(people, (old, person) => (person.age > old.age ? person : old));
+        console.log(oldest);
+        ```
+        **Expected Output:** `{ name: "Charlie", age: 30 }`  */
+
+        function findOldest(arr, callback){
+            let oldest = arr[0];
+            for (let i = 1; i< arr.length; i++){
+                oldest = callback(oldest,arr[i])
+            }
+            return oldest
+        }
+
+        const oldest = findOldest(people, (old, person) => (person.age > old.age ? person : old));
+        console.log(oldest);
+
+        /*#### 6️⃣ **Custom forEach: Log Names**  
+        **Task:** Implement `logNames(arr, callback)` that logs each person's name.  
+        **Example:**  
+        ```javascript
+        logNames(people, person => console.log(person.name));
+        ```
+        **Expected Output:**  
+        ```
+        Alice  
+        Bob  
+        Charlie  */
+
+        function logNames(arr, callback){
+            for(let i = 0; i < arr.length; i++){
+                callback(arr[i]);
+            }
+        }
+
+        logNames(people, person => console.log(person.name));
+
+        /*#### 7️⃣ **Transform Data into Strings**  
+        **Task:** Write `formatPeople(arr, callback)` that converts an array of people into an array of strings.  
+        **Example:**  
+        ```javascript
+        const descriptions = formatPeople(people, person => `${person.name} is ${person.age} years old.`);
+        console.log(descriptions);
+        ```
+        **Expected Output:**  
+        ```javascript
+        ["Alice is 25 years old.", "Bob is 17 years old.", "Charlie is 30 years old."] */
+
+        function formatPeople(arr, callback){
+            const result = [];
+            for(let i = 0; i< arr.length;i++){
+                result.push(callback(arr[i]))
+            }
+
+            return result
+        }
+
+        const descriptions = formatPeople(people, person => `${person.name} is ${person.age} years old.`);
+        console.log(descriptions);
+
+        /*#### 8️⃣ **Find the Youngest Person**  
+        **Task:** Implement `findYoungest(arr, callback)` that finds the youngest person in the array.  
+        **Example:**  
+        ```javascript
+        const youngest = findYoungest(people, (youngest, person) => (person.age < youngest.age ? person : youngest));
+        console.log(youngest);
+        **Expected Output:** `{ name: "Bob", age: 17 }` */
+
+        function findYoungest(arr, callback){
+            let youngest = arr[0];
+            for(let i = 0; i< arr.length;i++){
+                if(arr[i] < arr[0]){
+                    youngest = arr[i]
+                }
+            }
+            return youngest
+        }
+
+        const youngest = findYoungest(people, (youngest, person) => (person.age < youngest.age ? person : youngest));
+        console.log(youngest);
+
+        /*#### 9️⃣ **Check If All Are Adults**  
+        **Task:** Write `areAllAdults(arr, callback)` that checks if everyone is at least 18.  
+        **Example:**  
+        ```javascript
+        const allAdults = areAllAdults(people, person => person.age >= 18);
+        console.log(allAdults);
+        ```
+        **Expected Output:** `false`  */
+
+        function areAllAdults(arr, callback){
+            for(let i = 0;i< arr.length;i++){
+                if(callback(arr[i]) === false){
+                    return false
+                }
+            }
+            return true
+        }
+        const allAdults = areAllAdults(people, person => person.age >= 18);
+        console.log(allAdults);
+
+        /*#### 🔟 **Find the First Minor**  
+        **Task:** Write `findMinor(arr, callback)` that returns the first person under 18.  
+        **Example:**  
+        ```javascript
+        const firstMinor = findMinor(people, person => person.age < 18);
+        console.log(firstMinor);
+        ```
+        **Expected Output:** `{ name: "Bob", age: 17 }`  */
+
+        function findMinor(arr, callback){
+            for(let i = 0;i< arr.length;i++){
+                if(callback(arr[i]) < 18){
+                    return arr[i]
+                }
+            }
+            return arr[i]
+        }
+
+        const firstMinor = findMinor(people, person => person.age < 18);
+        console.log(firstMinor);
+
+
+        /* #### 1️⃣ **Recreate `map`**
+        **Task:** Implement `myMap(arr, callback)` that mimics `Array.prototype.map()`.  
+        **Example:**  
+        ```javascript
+        const result = myMap([1, 2, 3], num => num * 2);
+        console.log(result);
+        ```
+        **Expected Output:** `[2, 4, 6]`*/
+
+        function myMap(arr, callback){
+            const resultMap = [];
+            for(let i = 0;i<arr.length;i++){
+                resultMap.push(callback(arr[i]))
+            }
+            return resultMap
+        }
+        const resultMap = myMap([1, 2, 3], num => num * 2);
+        console.log(resultMap);
+
+        /*#### 2️⃣ **Recreate `filter`**  
+        **Task:** Write `myFilter(arr, callback)` that mimics `Array.prototype.filter()`.  
+        **Example:**  
+        ```javascript
+        const result = myFilter([1, 2, 3, 4], num => num > 2);
+        console.log(result);
+        ```
+        **Expected Output:** `[3, 4]` */
+
+        function myFilter(arr, callback){
+            const filterResult = [];
+            for(let i = 0;i<arr.length;i++){
+                if(callback(arr[i])){
+                    filterResult.push(arr[i])
+                }
+            }
+            return filterResult
+        }
+
+        const result2 = myFilter([1, 2, 3, 4], num => num > 2);
+        console.log(result2);
+
+        /* #### 3️⃣ **Recreate `reduce`**  
+        **Task:** Implement `myReduce(arr, callback, initialValue)` that behaves like `Array.prototype.reduce()`.  
+        **Example:**  
+        ```javascript
+        const sum = myReduce([1, 2, 3], (acc, num) => acc + num, 0);
+        console.log(sum);
+        ```
+        **Expected Output:** `6` */
+
+        function myReduce(arr, callback, initialValue){
+            let acc = initialValue;
+            for(let i = 0;i< arr.length;i++){
+                acc = callback(acc,arr[i])
+            }
+            return acc
+        }
+
+        const acc = myReduce([1, 2, 3], (acc, num) => acc + num, 0);
+        console.log(acc);
+
+        /* #### 4️⃣ **Recreate `forEach`**  
+        **Task:** Implement `myForEach(arr, callback)` that behaves like `Array.prototype.forEach()`.  
+        **Example:**  
+        ```javascript
+        myForEach([1, 2, 3], num => console.log(num));
+        ```
+        **Expected Output:**  
+        ```
+        1  
+        2  
+        3  */
+
+        function myForEach(arr, callback){
+            for(let i = 0;i<arr.length;i++){
+                callback(arr[i])
+            }
+        }
+        myForEach([1, 2, 3], num => console.log(num));
+
+        /*#### 5️⃣ **Recreate `find`**  
+        **Task:** Write `myFind(arr, callback)` that finds the first element that matches a condition, like `Array.prototype.find()`.  
+        **Example:**  
+        ```javascript
+        const result = myFind([1, 2, 3, 4], num => num > 2);
+        console.log(result);
+        ```
+        **Expected Output:** `3` */
+       
+        function myFind(arr, callback){
+            for(let i = 0;i<arr.length;i++){
+                if(callback(arr[i])){
+                    return arr[i];
+                }
+            }
+        }
+        const result = myFind([1, 2, 3, 4], num => num > 2);
+        console.log(result);
+    </script>
+</body>
+</html>

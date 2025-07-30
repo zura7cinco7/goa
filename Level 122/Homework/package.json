@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nino Gvinjilia",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "superheros": "^1.0.0"
+  }
+}

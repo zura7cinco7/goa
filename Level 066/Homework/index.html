@@ -1,0 +1,38 @@
+<!-- 1) კომენტარებით ახსენით პოზიციები. ისაუბრეთ რას აკეთებენ მისი მნიშვნელობები: static, relative, absolute
+
+2) კომენტარებით ახსენით თუ რას აკეთებს left, rigth, top, bottom კუთვნილებები
+
+3) შექმენით საიტი სადაც გამოიყენებთ დღეს ნასწავლ მასალას -->
+
+
+<!-- static ეს პოზიციის იგივე default მნიშვნელობაა როდესაც ჩვენ გამოვიყენებთ position:static იგი არ შეიცვლის მდებარეობას და არ იმოქმედებს 'top' 'right' 'bottom' 'left' თვისებებზე -->
+<!-- relative მისი მდებარეობა შეიცვლება თუ ჩვენ გამოვიყენებთ 'top' 'bottom' 'right' 'left'  ის მაინც შეინარჩუნებს ადგილს parent ელემენტში-->
+<!-- absolute მისი მდებარეობა იქნება მშობელი ელემენტის გარეთ იგივე მთლიან body თეგში -->
+
+<!-- left კუთვნილების დროს ელემენტი გადავა მარცხნივ და დავაშორებთ მშობელ ელემნტს იმდენით რამდენი pixel იც გვაქვს გაწერილი -->
+<!-- right კუთვნილების გამოყენების შემდეგ ელემენტი თავისი მდებარეობიდან გადაინაცვლებს მარჯვნივ -->
+<!-- top კუთვნილების გამოყენებით ჩვენი ელემენტი გადავა ქევიდან ძევით იმდენი pixel ით რამდენიც გვექნება გაწერილი -->
+<!-- bttom კუთვნილების გამოყენებით ჩვენი ელემენტი გადავა ზემოდან ქვემოთ parent ელემნტში -->
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="parent">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child div-6">6</div>
+        </div>
+    </main>
+</body>
+</html>

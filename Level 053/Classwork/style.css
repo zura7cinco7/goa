@@ -1,0 +1,23 @@
+.parent{
+    width:300px;
+    height: 300%;
+    background-color: red;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left:10px;
+
+    border-top: 20px solid green;
+    border-right:10px dashed blue;
+    border-bottom: 10px dotted lightblue;
+    border-left: 20px solid peru;
+    margin-bottom: 5%;
+}
+
+.child{
+    width: 100px;
+    height:100%;
+    background-color: blue;
+}
+

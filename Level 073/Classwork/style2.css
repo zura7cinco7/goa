@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+    width: 1200px;
+    height: 600px;
+    border: 5px solid black;
+}
+
+section {
+    background-color: rgb(124, 239, 201);
+    border: 3px solid blueviolet;
+}
+
+section:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+section:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+section:nth-child(6) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}

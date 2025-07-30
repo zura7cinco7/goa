@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) შექმენით ღილაკი და მოუსმინეთ დაკლიკების მოვლენას, script თეგებში, შექმენით ფუნქცია სახელად counter და აგრეთვე ფუნქცის ზემოთ
+    ცვლადი სახელად count, როდესაც ღილაკზე მოხდება დაკლიკება უნდა გაეშვას 
+    counter ფუნქცია და დააპლიუსოს count ცვლადი, აგრეთვე დაბეჭდეთ ამჟამინდელი count ცვლადის მნიშვნელობა, კონსოლში -->
+    <button onclick="counter()">Click Here To increase the count</button>
+    <button id="AddProductId">Add The Product</button>
+
+    <table id="Table" border="1">
+        <thead>
+            <tr>
+                <th>Name Of The Product</th>
+                <th>Quantity of the Product</th>
+                <th>Price of the Product</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <p>Total Price : 0</p>
+    <script>
+        let count = 0;
+
+        function counter() {
+            count++;
+            console.log(count)
+        }
+
+        // 2) შექმენით ღილაკი, რომელზეც დაკლიკების შედეგად გამოჩნდება 3 შესატანი ველი prompt მეშვეობით, პირველში მომხმარებელმა უნდა შეიტანოს პროდუქტის სახელი, 
+        // მეორეში უნდა შეიტანოს რაოდენობა და მესამეში უნდა შეიტანოს ფასი, როდენობა და ფასი უნდა გარდაქმნათ რიცხვებად, შემოტანილი მნიშვნელობებით შექმენით ახალი 
+        // tr ახალი 3 td თეგით, რომელშიც დაამატებთ რიგრიგობით  სახელს, რაოდენობას და ფასს,
+        //  ცხრილის ქვემოთ უნდა იყოს პარაგრაფი რომელშიც წერია Total Price სადაც უნბდა ჩასვათ ყოველ ახალი პროდუქტის დამატების შემდეგ
+        //  მთლიანი პროდუქტების ღირებულება
+        const btn = document.querySelector("#AddProductId");
+        const tbody = document.querySelector("tbody");
+        const p = document.querySelector("p");
+
+        const products = [];
+        
+        const createTr = (productName, productQuantity, productPrice) => {
+            const newTr = document.createElement("tr");
+            
+            const nameTd = document.createElement("td");
+            nameTd.textContent = productName;
+
+            const quantityTd = document.createElement("td");
+            quantityTd.textContent = productQuantity;
+
+            const priceTd = document.createElement("td");
+            priceTd.textContent = productPrice;
+
+            newTr.appendChild(nameTd);
+            newTr.appendChild(quantityTd);
+            newTr.appendChild(priceTd);
+
+            return newTr;
+        }
+
+        btn.addEventListener("click", () => {
+            const productName = prompt("Please enter product name");
+            const productQuantity = parseInt(prompt("Please enter product quantity"));
+            const productPrice = parseFloat(prompt("Please enter product price"));
+
+            products.push({productName, productQuantity, productPrice});
+
+            if(productName.length === 0 || !productQuantity || !productPrice){
+                alert("Please fill all fields");
+                return;
+            }
+            const totalPrice = products.reduce((prev, cur) => prev + cur.productPrice * cur.productQuantity, 0);
+            p.textContent = `Total Price: ${totalPrice}`;
+
+            tbody.appendChild(createTr(productName, productQuantity, productPrice))
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* შექმენით ფუნქცია, მაღალი რიგის ფუნქცია, რომელსაც არგუმენტად გადაეცემა ფუნქცია და იძახებს მას.
+        კომენატარებით ახსენით რა არის მაღალი რიგის ფუნქცია, როგორ ხდება ისე რომ ფუნქციას გადაეცემა ფუნქცია.
+        რას ნიშნავ callback ფუნქციები */
+
+        function highOrderFunction(function2) {
+            return function2();
+        }
+
+        function greetUser() {
+            return "Hello world!";
+        }
+
+        const result = highOrderFunction(greetUser);
+        console.log(result);
+
+        /* მაღალი რიგის ფუნქცია არის ისეთი ფუნქცია რომელიც იღებს მეორე ფუნქციას არგუმენტად
+        ხოლო callback ი არის ისეთი ფუნქცია რომელიც გადაეცემა ფუნქციას არგუმენტად*/
+
+
+        /* 2) შექმენით ფუნქცია სახელად manualForEach რომელსაც გადაცემა პირველი მასივი და მერე ფუნქცია, გაუარეთ მასივს for ციკლის გამოყენებით 
+        და თითოეულ ელემენტზე გამოიძახეთ გადმოცემული ფუნქცია, manualForEach_იდან არაფრის დაბრუნება არ გიწევთ (არ გამოიყენოთ return) */
+        function manualForEach(arr,func2){
+            for(let i = 0;i < arr.length;i++){
+                func2(arr[i]);
+            }
+        };
+
+        manualForEach([1,2,3],number => console.log(number))
+    </script>
+</body>
+</html>

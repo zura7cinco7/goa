@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const months = ['February','March','April','May','June','July'];
+        const months2 = ['October','August'];
+        const concatmonths = months.concat(months2);
+        console.log(concatmonths);
+        const removedMonth = months.shift();
+        const added = months.unshift('January','Semptember');
+        console.log(months);
+        const splicedmonth = months.splice(3,2,'November','December');
+        console.log(splicedmonth);
+        const indexOfMonth = months.indexOf('March');
+        console.log(indexOfMonth);
+        const joinmonths = months.join(' + ');
+        console.log(joinmonths);
+        const slicemonth = months.slice(3,6);
+        console.log(slicemonth);
+
+        const sports = ['Football','VolleyBall','BasketBall'];
+        const sports2 = ['BaseBall','Cycling'];
+        const concatsports = sports.concat(sports2);
+        console.log(concatsports);
+        const removedSport = sports.shift();
+        const addedSport = sports.unshift('Swimming');
+        console.log(sports);
+        const splicesports = sports.splice(2,5,'Snowboarding','IceSkating');
+        console.log(splicesports);
+        const indexOfSport = sports.indexOf('VolleyBall');
+        console.log(indexOfSport);
+        const joinsports = sports.join(' + ');
+        console.log(joinsports);
+        const sliceSport = sports.slice(1,3);
+        console.log(sliceSport);
+
+        const groceryList = ['Orange Juice','Avocado','WaterMelon'];
+        const groceryList2 = ['blueberries', 'avocados', 'artichoke'];
+        const concatgrocery = groceryList.concat(groceryList2);
+        console.log(concatgrocery);
+        const removedGroceryItem = groceryList.shift();
+        const addedGroceryItem = groceryList.unshift('melon','Strawberry');
+        console.log(groceryList);
+        const spliceGroceryItem = groceryList.splice(3,5,'pear','pineapple');
+        console.log(spliceGroceryItem);
+        const indexOfGroceryItem = groceryList.indexOf('Avocado');
+        console.log(indexOfGroceryItem);
+        const joingroceryitems = groceryList.join(',');
+        console.log(joingroceryitems);
+        const sliceGroceryItem = groceryList.slice(1,4);
+        console.log(sliceGroceryItem);
+
+        const hobbies = ['Reading','Swimming','Drawing'];
+        const hobbies2 = ['Knitting','Chess'];
+        const concatHobbies = hobbies.concat(hobbies2);
+        console.log(concatHobbies);
+        const removedHobby = hobbies.shift();
+        const addedHobby = hobbies.unshift('Singing')
+        console.log(hobbies);
+        const splicehobby = hobbies.splice(1,3,'Biking','Skiing');
+        console.log(splicehobby);
+        const indexofHobby = hobbies.indexOf('Skiing');
+        console.log(indexofHobby);
+        const joinhobbies = hobbies.join(' + ');
+        console.log(joinhobbies);
+        const sliceHobby = hobbies.slice(0,2);
+        console.log(sliceHobby);
+
+        const Weekend = ['Monday','Tuesday','Wednesday','Thursday'];
+        const days = ['Day1','Day2','Day3'];
+        const concatDays = Weekend.concat(days);
+        console.log(concatDays);
+        const removedDay = Weekend.shift();
+        const addedDay = Weekend.unshift('Saturday','Sunday');
+        const spliceDay = Weekend.splice(3,2,'Friday','Monday');
+        console.log(spliceDay);
+        console.log(Weekend);
+        const indexOfDay = Weekend.indexOf('Tuesday');
+        console.log(indexOfDay);
+        const joindays = Weekend.join(' + ');
+        console.log(joindays);
+        const sliceDay = Weekend.slice(0,3);
+        console.log(sliceDay);
+    </script>
+</body>
+</html>

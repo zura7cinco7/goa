@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width:350px;
+    height: 600px;
+    background-color: hsl(216, 50%, 16%);
+    border:1px solid black;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+h3{
+    font-family: "Outfit", serif;
+    font-weight: 400;
+    color:hsl(0, 0%, 100%);
+    margin-bottom:20px;
+}
+
+.paragraph1{
+    font-family:"Outfit", serif;
+    font-weight: 100;
+    color:#8BACD9;
+    margin-bottom: 20px;
+}
+
+.icon,.paragraph2{
+    font-family: "Outfit", serif;
+    font-weight: 200;
+    color:#00FFF8;
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.paragraph2{
+    padding-right:150px;
+}
+
+.icon1,.paragraph3{
+    font-family: "Outfit", serif;
+    font-weight: 200;
+    color:#8BACD9;
+    display:inline;
+    margin-bottom: 30px;
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.info{
+    display:flex;
+    flex-wrap: wrap;
+    width:300px;
+    margin-bottom: 20px;
+}
+
+
+.image1-div{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    margin-top: 20px;
+    border-top: 1px solid #8BACD9;
+    padding-top: 10px;
+}
+
+.img2{
+    width:30px;
+    border:1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    display: block;
+}
+
+.paragraph4{
+    font-family: "Outfit", serif;
+    color:#8BACD9;
+}
+
+.paragraph{
+    display:flex;
+    align-items: center;
+    gap:10px
+}
+
+.paragraph5{
+    font-family:"Outfit", serif;
+    color:white
+}

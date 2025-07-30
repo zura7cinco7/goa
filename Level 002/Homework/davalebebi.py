@@ -1,0 +1,26 @@
+print(5+5)
+print(12*24)
+print(100/5)
+print(10+10)
+print(34/2)
+print(23*90)
+print(5*5)
+print(150/5)
+print(30*90)
+print(120+120)
+print(15+19)
+print(90+13)
+print(15+15)
+print(30+60)
+print(50/5)
+
+print("Family Members:")
+print("Nino Gvinjilia")
+print("Nana Chartolani")
+print("Mexail Gvinjilia")
+print("Anastasia Gvinjilia")
+
+
+
+print("friend:")
+print("Salome Sesitashvili")

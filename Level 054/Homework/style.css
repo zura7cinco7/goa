@@ -1,0 +1,77 @@
+.Bono{
+    padding:20px;
+    margin-bottom:40px;
+    width:200px;
+    background-color: #4081ec;
+    color:white
+}
+
+.Edge{
+    padding:20px;
+    margin-bottom:40px;
+    width:200px;
+    background-color: #ffbb33;
+    color:black
+}
+
+.Adam{
+    padding:20px;
+    margin-bottom:40px;
+    width:200px;
+    background-color: #f73345;
+    color:white
+}
+
+.Larry{
+    padding:20px;
+    margin-bottom:40px;
+    width:200px;
+    background-color: #e0e0e0;
+    color:black;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    gap:1em;
+}
+
+
+#button10{
+    width:400px;
+    height:300px;
+    background-color:#4C585B;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.button1,.button2,.button3,.button4,.button5{
+    padding:5px;
+    margin-bottom: 40px;
+    width:200px;
+    border-radius: 10px;
+}
+
+.button1:hover,.button3:hover,.button4:hover{
+    background-color: #4081ec;
+    color:white;
+}
+
+.button2:hover,.button5:hover{
+    background-color: #4C585B;
+    color:white
+}
+
+.p1{
+    color:rgb(110, 245, 110);
+}
+
+.p2{
+    color: #ffff;
+}
+
+.h1{
+    color:#ffff;
+}

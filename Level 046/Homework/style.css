@@ -1,0 +1,23 @@
+.class1{
+    font-style: italic;
+    text-decoration:underline dotted green;
+}
+
+.class2{
+    font-style: oblique;
+    text-decoration:line-through solid red;
+}
+
+.class3{
+    font-style: italic;
+    text-decoration:overline dashed blue;
+}
+
+h1{
+    text-align: center;
+}
+
+b{
+    display: block;
+    text-align: center;
+}

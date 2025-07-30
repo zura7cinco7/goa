@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    background-color:hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width:650px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+}
+
+
+.main1-div{
+    width:770px;
+    height: 440px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #6340FB;
+    border-radius: 25px;
+}
+
+.info1{
+    text-align: center;
+    font-family: "Hanken Grotesk", serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph1{
+    padding-top: 40px;
+    color:hsl(241, 100%, 89%);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+
+.circle{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#452DDB;
+    width:150px;
+    height: 150px;
+    border:10px solid #452DDB;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.paragraph2{
+    text-align: center;
+    color:white;
+    font-weight: 700;
+    font-size: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph3{
+    color:hsl(252, 100%, 67%);
+    font-weight: 600;
+}
+
+h2{
+    color:white;
+    margin-bottom: 15px;
+}
+
+.paragraph4{
+    color:hsl(241, 100%, 89%)
+}
+
+.main-div{
+    padding-right: 10px;
+    width:900px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family:"Hanken Grotesk", serif;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+h3{
+    margin-top: 140px;
+    color:hsl(224, 30%, 27%);
+    margin-bottom: 20px;
+}
+
+.info2{
+    display:inline-block;
+    background-color: #FFF7F5;
+    padding:15px;
+    border-radius: 10px;
+    width:250px;
+    margin-bottom: 15px;
+}
+
+.paragraph5{
+    display: inline-block;
+    color:hsl(0, 100%, 67%);
+    margin-right: 70px;
+    font-weight: 700;
+}
+
+.paragraph6{
+    display: inline-block;
+    color:hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.paragraphh6{
+    display: inline-block;
+    color:hsl(241, 100%, 89%);
+    font-weight: 600;
+}
+
+.info3{
+    display:inline-block;
+    background-color: #FDFDF1;
+    padding:15px;
+    border-radius: 10px;
+    width:250px;
+    margin-bottom: 15px;
+}
+
+.paragraph7{
+    display:inline-block;
+    color:hsl(39, 100%, 56%);
+    margin-right: 70px;
+    font-weight: 700;
+}
+
+.paragraph8{
+    display: inline-block;
+    color:hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.paragraphh8{
+    display: inline-block;
+    color:hsl(241, 100%, 89%);
+    font-weight: 700;
+}
+
+.info4{
+    display:inline-block;
+    background-color: #F2FBFA;
+    padding:15px;
+    border-radius: 10px;
+    width:250px;
+    margin-bottom: 15px;
+}
+
+.paragraph9{
+    display:inline-block;
+    color:hsl(166, 100%, 37%);
+    margin-right: 80px;
+    font-weight: 700;
+}
+
+.paragraph10{
+    display: inline-block;
+    color:hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.paragraphh10{
+    display: inline-block;
+    color:hsl(241, 100%, 89%);
+    font-weight: 700;
+}
+
+.info5{
+    display:inline-block;
+    background-color: #F3F3FF;
+    padding:15px;
+    border-radius: 10px;
+    width:250px;
+    margin-bottom: 20px;
+}
+
+
+.paragraph11{
+    display:inline-block;
+    color:hsl(234, 85%, 45%);
+    margin-right: 80px;
+    font-weight: 700;
+}
+
+.paragraph12{
+    display: inline-block;
+    color:hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.paragraph13{
+    display: inline-block;
+    color:hsl(241, 100%, 89%);
+    font-weight: 700;
+}
+
+button{
+    width:250px;
+    font-family:"Hanken Grotesk", serif;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 25px;
+    border:none;
+    padding:15px;
+    font-weight: 700;
+    color:white;
+    margin-bottom: 100px;
+}
+
+
+button:hover{
+    background-color: #F2FBFA;
+    color:hsl(224, 30%, 27%);
+    cursor: pointer;
+    border:1px solid black;
+    transition: 0.25s;
+}

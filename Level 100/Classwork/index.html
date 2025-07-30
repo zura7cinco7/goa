@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) შექმენით manualFindIndex, რომელიც არის findIndex ის კოპიო მეთოდი
+        const manualFindIndex = (arr,callback) => {
+            for(let i = 0;i < arr.length;i++){
+                if(callback(arr[i])){
+                    return i
+                }
+            }
+        }
+
+        const manualFindIndexResult = manualFindIndex(['Elephant','Eagle','Snail'], word => word[0] === 'E')
+        console.log(manualFindIndexResult);
+
+        // 2)  შექმენით manualReduce, რომელიც არის reduce ის კოპიო მეთოდი
+        function manualReduce(arr,callback,startingValue){
+            let accumulator =  startingValue == undefined ? arr[0]: startingValue;
+            for(let i = startingValue == undefined ? 1:0; i < arr.length; i++){
+                accumulator = callback(accumulator,arr[i])
+            }
+            return accumulator
+        }
+
+        const result = manualReduce([1,2,3,4,5], (num1, num2) => num1 + num2,12);
+        console.log(result);
+
+
+        /* 3) გამოიყენეთ filter მეთოდი სახელების სიაზე, თვქენი დავალებაა filter მეთოდით შემქნათ მასივი სადაც მოცემული ინქება 
+        მხოლოდ ის სახელები რომლის ინდექსებიც არის ლუწი */
+        const nameArr = ['Nino','Anastasia','Nana','Michael'];
+        console.log(nameArr.filter((name,index) => index % 2 == 0));
+
+        /* 4) გამოიყენეთ map მეთოდი რიცხვების მასივზე, დააბრუნეთ ახალი მასივი სადაც მხოლოდ კენტ ინდექსებზე მოცემული 
+        რიცხვები იქნება გაორმაგებული */
+        const numArr = [1,2,3,4,5,6,7,8,9,10];
+        const result2 = numArr.map((num, index) => 
+            index % 2 !== 0 ? num * 2 : num
+        );
+        console.log(result2);
+    </script>
+</body>
+</html>

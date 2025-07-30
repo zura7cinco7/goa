@@ -1,0 +1,43 @@
+a:hover{
+    color:blue;
+    font-size: 50px;
+    background-color: red;
+}
+a:active{
+    color:red;
+}
+
+
+#table1,th,td{
+    text-align: center;
+    border:2px solid green;
+    width: 30%;
+}
+
+.th1{
+    background-color:orange;
+}
+
+
+.td1{
+    background-color:orange;
+}
+
+#table2{
+    border-collapse: collapse;
+    width:30%;
+}
+
+#table2 thead tr{
+    background-color: #009779;
+    color: #ffff;
+    text-align: left;
+}
+
+#table2 tbody tr{
+    border:1px solid #dddd;
+}
+
+#table2 tbody tr{
+    background-color: #f3f3f3;
+}

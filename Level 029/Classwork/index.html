@@ -1,0 +1,48 @@
+<!-- შექმენით სარეგისტრაციო ფორმა. მომხარებელს შემოატანინეთ ემაილი, პაროლი და სახელი. თითოეულ input-ს უნდა ჰქონდეს type, name, 
+id, placeholder, required ატრიბუტები. გამოიყენეთ label თეგი და მასში for ატრიბუტი. -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User-information</title>
+    </head>
+    <body>
+        <form>
+            <label for="email">Please enter an email</label>
+            <input id="email" type="email" placeholder="please enter an email" name="email" required>
+
+            <br/>
+            <label for="age">Please enter your age</label>
+            <input id="age" type="age" placeholder="Please enter your age" name="age" required>
+
+            <br/>
+            <label for="password">Please enter your password</label>
+            <input id="password" type="password" placeholder="Please enter your password" name="password" required>
+
+            <br/>
+            <label for="name">Please enter your name</label>
+            <input id="name" type="name" placeholder="Please enter your name" name="name" required>
+            <!--დაამატეთ თქვენს სარეგისტრაციო ფორმაში გენდერის არჩევანი. მომხარებელს მხოლოდ ერთის არჩევა უნდა შეეძლოს -->
+            <br/>
+            <input type="radio" id="male" value="male" name="gender"/>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" value="female" name="gender"/>
+            <label for="female">female</label>
+
+            <!--შექმნილ სარეგისტრაციო ფორმას დაამატეთ არჩევანი, რომ მომხარებელს შეეძლოს საცხოვრებელი ქალაქის არჩევა.(მინიმუმ 5 ქალაქი) -->
+            <br/>
+            <select name="Country/city">
+                <option value="GE"selected>Georgia</option>
+                <option value="Sv">Svaneti</option>
+                <option value="Im">Imereti</option>
+                <option value="Tb">Tbilisi</option>
+                <option value="sa">Samegrelo</option>
+            </select>
+            <button>sumbit</button>
+        </form>
+        <!-- <br> თეგი რომელიც ტეხავს ხაზს და მეორე ხაზზე გადადის -->
+        <!-- <required> თეგი თხოვს მომხმარებელს რომ აუცილებლად ჩაწეროს ესა თუ ის მონაცემი ველში -->
+        <!-- <palceholder> თეგი იკავებს ველში სახელს და ამბობს თუ რა უნდა ჩაწეროს მომხმარებელმა -->
+        <!-- <label> თეგი არის იგივე ეტიკეტი -->
+    </body>
+</html>

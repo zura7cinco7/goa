@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.row-div{
+    display: flex;
+}
+
+.header-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.h1-div{
+    background-color: black;
+    width:340px;
+    height:650px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.image1{
+    position: relative;
+}
+
+.h1-1{
+    font-family: "Big Shoulders Display", serif;
+    color:#171414;
+    padding-top: 200px;
+    font-size: 60px;
+    position: absolute;
+    left:208px;
+    z-index: 1;
+}
+
+.h1-2{
+    font-family: "Big Shoulders Display", serif;
+    color:#ECECEC;
+    padding-top: 200px;
+    font-size: 60px;
+    position: absolute;
+    left:205px;
+    z-index: 1;
+}
+
+img{
+    width:510px;
+    height:650px;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    position: absolute;
+    left:740px;
+}
+
+.paragraph1{
+    font-family: "Mona Sans", serif;
+    color:rgb(96, 95, 95);
+    margin-bottom: 50px;
+}
+
+
+button{
+    border:none;
+    font-family: "Big Shoulders Display", serif;
+    background-color: black;
+    color:white;
+    font-weight: 600;
+    font-size: 17px;
+    width:250px;
+    height:65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+svg{
+    height:65px;
+    width:50px;
+}
+
+.arrow{
+    background-color: #DB9564;
+    width:50px;
+    height: 65px;
+    position: absolute;
+    right:65px;
+    bottom: 0;
+}
+
+
+.info{
+    display: flex;
+    justify-content: center;
+}
+
+
+.info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:300px
+}
+
+
+.Gallery-info-div{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    margin-bottom: 20px;
+}
+
+.img2{
+    width:420px;
+    height:260px
+}
+
+.h2-1{
+    font-family: "Big Shoulders Display", serif;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.paragraph2{
+    font-family: "42dot Sans", serif;
+    color:rgb(96, 95, 95);
+    margin-bottom: 50px;
+}
+
+.section1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.image3{
+    position: relative;
+    padding-left: 440px;
+}
+
+.img3{
+    width:440px;
+    height:480px;
+    position: absolute;
+    right:0px;
+}
+
+.image4{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-2{
+    padding-left: 20px;
+}
+
+.img4{
+    width:310px;
+    height:220px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.info3{
+    background-color: black;
+    width:290px;
+    height:240px;
+    padding-left: 30px;
+    padding-top: 40px;
+}
+
+.h2-2{
+    font-family:"Big Shoulders Display", serif;
+    color:white;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.paragraph3{
+    color:#AEAEAE;
+    font-family: "42dot Sans", serif;
+    font-size: 14px;
+}
+
+.footer{
+    background-color: black;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.h2-3{
+    font-family:"Big Shoulders Display", serif;
+    color:white;
+    font-size: 25px;
+    font-weight: 800;
+    padding-right: 150px;
+}
+
+.paragraph4{
+    color:#AEAEAE;
+    font-family: "42dot Sans", serif;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-right: 250px;
+}
+
+.icons{
+    background-color: black;
+    padding-top: 50px;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        function mostFrequentDigitSum(n){
+        if(n === 0){
+          return -1
+        }
+        
+        let result = n;
+        const digitsSumArr = [];
+        
+        while(result > 0){
+          let digitsSum = 0;
+          const strN = String(result);
+          
+          for(let i = 0; i < strN.length; i++){
+            digitsSum += parseInt(strN[i]);
+          }
+          
+          result -= digitsSum;
+          
+          digitsSumArr.push(digitsSum);
+        }
+        
+        let maxCount = 0;
+        let mostFrequentSum = digitsSumArr[0];
+        
+        for (let j = 0; j < digitsSumArr.length; j++) {
+          let count = 0;
+          for (let h = 0; h < digitsSumArr.length; h++) {
+            if (digitsSumArr[j] === digitsSumArr[h]) {
+              count++;
+            }
+          }
+          
+          if (count > maxCount || (count === maxCount && digitsSumArr[j] > mostFrequentSum)) {
+            maxCount = count;
+            mostFrequentSum = digitsSumArr[j];
+          }
+        }
+      
+        return mostFrequentSum;
+      }
+    </script>
+</body>
+</html>

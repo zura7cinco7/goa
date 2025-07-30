@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* შექმენით arrow ფუნქცია, რომელსაც გადაიცემა ერთი რიცხვი, თქვენი დავალებაა ფუნქციაში შექმნათ მასივი სახელად evenNumbers და ფორ 
+        ციკლის გამოყენებით 0დან გადაცემული რიცხვის ჩათვლით იპოვოთ ლუწი რიცხვები, პოვნის შემდეგ დაამატეთ ის მასივში, საბოლოოდ კი დააბრუნეთ მასივი */
+
+        const checkEvens = num => {
+            const evenNumbers = [];
+            for(let i = 0; i <= num; i++){
+                if (i % 2 === 0){
+                    evenNumbers.push(i)
+                }
+            }
+            return evenNumbers;
+        }
+        console.log(checkEvens(12));
+
+        /* 2) შექმენით ფუნქცია, რომელსაც გადაეცემა რიცხვთა მასივი და შეკრიბეთ ყველა ლუწ ინდექსზე მდგომი რიცხვი, საბოლო ჯამი კი დააბრუნეთ ფუნქციიდან */
+
+        function sumEvenIndex(arr){
+            let sum = 0;
+            for(let i = 0; i < arr.length; i++){
+                if(i % 2 == 0){
+                    sum += arr[i]
+                }
+            }
+            return sum;
+        }
+        console.log(sumEvenIndex([1,2,3,4,5]));
+
+        /* 3) შექმენით ფუნქცია, რომელსაც გადაეცემა მასივი, სადაც მხოლოდ სტრინგებია მოცემული, თქვენი დავალებაა რომ დააბრუნოთ ამ მასივიდან ყველაზე გრძელი სტრინგი */
+        function longestStringInArray(Arr){
+            let longestString = '';
+            for(let i = 0; i < Arr.length; i++){
+                if (Arr[i].length > longestString.length){
+                    longestString = Arr[i];
+                }
+            }
+            return longestString;
+        }
+
+        console.log(longestStringInArray(['Word1','Word123','Word1234']));
+
+        // 4) შექმენით ციკლი რომელიც დაიწყებს 5 დან და ჩავა 0ის ჩათვლი
+
+        for(let i = 5; i >= 0; i--){
+            console.log(i)
+        }
+    </script>
+</body>
+</html>

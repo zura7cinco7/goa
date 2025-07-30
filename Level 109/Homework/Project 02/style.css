@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.palm,.fist{
+    width:200px;
+}
+
+.scissors{
+    width:150px;
+    padding-top:20px;
+}
+
+p{
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-size: 18px;
+}
+
+#p1{
+    padding-left: 80px;
+}
+
+#p2{
+    padding-left: 90px;
+}
+
+#p3{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#h1{
+    font-family: "National Park", sans-serif;
+    margin-bottom: 30px;
+}
+
+.two{
+    display: flex;
+    justify-content: center;
+    gap:70px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 70px;
+    gap:50px
+}
+
+#revealBtn{
+    padding:20px;
+    border:none;
+    border-radius:20px;
+    background-color: rgb(58, 58, 222);
+    color:white;
+    margin-bottom: 50px;
+}
+
+.p{
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.Clicker{
+    font-family: "National Park", sans-serif;
+    font-weight: 600;
+}
+
+.yourScore{
+    padding-top: 20px;
+}
+
+.ComputerScore{
+    padding-top: 20px;
+}

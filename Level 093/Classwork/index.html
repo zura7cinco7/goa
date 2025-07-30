@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [1,2,3,4,5];
+        const addnumbers = array.push(6,7,8,9,10);
+        console.log(array)
+
+        let cities = ['Tbilisi','Paris'];
+        let addcities = cities.push('London','Berlin');
+        console.log(cities)
+
+
+        let Array = [1,2,3,4,5];
+        let updatedArray = addToArray(Array,6);
+
+        function addToArray(arr,value){
+            arr.push(value);
+            return arr
+        }
+
+        console.log(updatedArray)
+
+        const arraypop = [1,2,3,4,5];
+        const popvalue = arraypop.pop(4);
+        console.log(arraypop);
+
+
+        let animals = ['dog','cat','elephant','tiger'];
+        let animalspop = animals.pop(1);
+        let animal2pop = animals.pop(3)
+        console.log(animals);
+
+        const arrayWithunshift = [1,2,3,45];
+        const add = arrayWithunshift.unshift(12,13,14);
+        console.log(arrayWithunshift);
+
+        let weekdays = ['Tuesday','Wednesday','Thursday'];
+        let addDays = weekdays.unshift('Monday');
+        console.log(weekdays);
+
+        let unshiftArray = ['word1','word2','word3'];
+        let unshiftApdatedArray = addToStart(unshiftArray,'word0')
+
+        function addToStart(arr,value){
+            arr.unshift(value);
+            return arr;
+        }
+
+        console.log(unshiftArray)
+
+
+        const numbers = [100,102,103,104,105];
+        const deletenum = numbers.shift(0);
+        console.log(numbers);
+
+        let drinks = ['coffee','tea','juice','soda'];
+        let deletedrink = drinks.shift(0);
+        let deleteddrink2 = drinks.shift(2);
+        console.log(drinks);
+
+        let removeWithShift = ["Singing",'Drawing'];
+        let updatedShiftArr = removeFirst(removeWithShift)
+        function removeFirst(arr){
+            arr.shift();
+            return arr
+        }
+
+        console.log(updatedShiftArr)
+
+        const elements = [1,2,3,4,5,6,7];
+        const sliceelements = elements.slice(2,5);
+        console.log(sliceelements);
+        console.log(elements);
+
+        let words = ['hello','world','Javascript','is','fun'];
+        const wordsslice = words.slice(3,5);
+        console.log(wordsslice);
+        console.log(words);
+
+
+        const nums = [1,2,3,4,5,6,7,8,9,10];
+        const splicenum = nums.splice(2,4);
+        console.log(nums);
+
+        let letters = ['A','B','C','D','E'];
+        let lettersSplice = letters.splice(2,4,'X','Y');
+        console.log(letters);
+
+        let modifyArr = [1,2,3,4,5,6,7,8];
+        let updatedarr = modifyArray(modifyArr,3,7,['Monday','Tuesday'])
+
+        function modifyArray(arr,index,deleteCount,newElements){
+            arr.splice(index,deleteCount,...newElements);
+            return arr
+        }
+
+        console.log(modifyArr)
+
+        const wordsarray = ['word1','word2','word3','word4'];
+        const Joinarray = wordsarray.join('+');
+        console.log(Joinarray);
+
+        let items = ['apple','banana','cherry'];
+        let joinitems = items.join('-');
+        console.log(joinitems);
+
+        let seperatorArr = [1,2,3,4,5];
+        let updated = arrayToString(seperatorArr, '+')
+
+        function arrayToString(arr,seperator){
+            return arr.join(seperator);
+        }
+
+        console.log(updated);
+
+        const numbersElements = [1,2,3,4,5,6,7,8,9,10];
+        const indexOfNumber = numbersElements.indexOf(10);
+        console.log(indexOfNumber);
+        
+        let colors = ['red','blue','green','blue','yellow'];
+        let find = colors.indexOf('blue');
+        console.log(find);
+
+
+        let findIndexArr = ['Word1','Word2','Word3'];
+        let updatedIndexArr = findIndex(findIndexArr,'Word2')
+        function findIndex(arr,value){
+            return arr.indexOf(value);
+        }
+
+        console.log(updatedIndexArr);
+    </script>
+</body>
+</html>

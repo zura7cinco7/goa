@@ -1,0 +1,17 @@
+.parent{
+    width:500px;
+    height:500px;
+    border:2px solid red;
+    background-color: aquamarine;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.child{
+    border:3px  solid black;
+    width:100px;
+    height:100px;
+    background-color: red;
+}
+

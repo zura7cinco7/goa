@@ -1,0 +1,119 @@
+<!-- 2) კომენტარებით ახსენით, რა არის სელექტორი, რამდენი ტიპის გვაქვს. ისაუბრეთ მათ პრიორიტეტულობაზე და გააკეთეთ ამის შესახებ მოკლე პრეზენტაცია -->
+
+<!-- სელექტორი არის ერთ-ერთი ძირითადი მექანიზმი, რომლის საშუალებითაც განვსაზღვრავთ, თუ რომელ HTML ელემენტებზე უნდა გავრცელდეს <style> ატრიბუტი-->
+
+<!-- შექმენით საიმფორმაციო საიტი Front-end-ის შესახებ. საიტი უნდა იყოს დაყოფილი სექციებად.
+
+Header-Section
+
+პირველ რიგში შექმენით header-ი სადაც მოათავსებთ საიტის მთავარ სათაურს(h1) და ნავიგაციის სექციას(დაგჭირდებათ nav თეგი, რომელშიც გექნებათ დაულაგებელი სია და სიის თითოეული ელემენტი(li) იქნება ლინკი, სხვა გვერდზე გადასასვლელად. დაგჭირდებათ a თეგი. ლინკების href ატრიბუტში მიუთითეთ # მასზე დაჭერისას იგივე ფაილში რომ დარჩეს. 
+სხვა გვერდის შექმნა არ გიწევთ, ეს უბრალოდ ვიზუალისთვის). ასევე header-ში გექნებათ ერთი პარაგრაფი სადაც ძალიან ზოგადად და მოკლედ ისაუბრებთ front-end-ის შესახებ.
+
+Main-Section
+
+Section-1
+შემდეგ შექმენით main თეგი, სადაც მოათავსებთ საიტის მთავარ ინფორმაციას. აქ დაგჭირდებათ რამოდენიმე სექცია(section თეგი). თითოეულ სექციას უნდა ჰქონდეს თავისი სათაური(h2). პირველ სექციაში შექმენით სათაური What is Frontend? და ისაუბრედ დეტალურად ამ თემაზე.(ასევე ძალიან მოკლედ განიხილეთ html,css,js)
+
+Section-2
+შექმენით HTML-ის შესახებ სექცია. შესაბამისის სათაურით(h2). დეტალურად ისაუბრეთ მასზე(პასუხი უნდა გასცეთ შემდეგ კითხვებს: რა არის HTML, რისთვის გამოიყენება...)
+  Sub-Section
+    მეორე სექციაში შექმენით ქვე სექცია, სათაურით History(გამოიყენეთ h3). ისაუბრეთ Html-ის შექმნის ისტორიაზე.
+
+Section-2 ის მსგავსი სტრუქტურით დაამატეთ ორი სექცია, CSS-ზე და JavaScrpit-ზე, იგივე სახის ქვე სექციით
+
+Main-Section-ის(main tag) თითოეულ სექციაში უნდა გქონდეთ 1 ფოტო.(History ქცე სექციაში არ გინდათ). დაამატეთ ღილაკებიც სურვილისამებრ
+
+გასტილეთ ეს საიტი, გამოიყენეთ ყველა ნასწავლი CSS-ის კუთვნილება(ეს ტერმინი არ იცით, უბრალოდ სტილი. მაგ: color: "..." -> color არის კუთვნილება) -->
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Front-End</title>
+
+        <style>
+            p{
+                color:white;
+                background-color:green;
+                text-align: center;
+                font-style: oblique;
+            }
+            #unique{
+                color:blue;
+                background-color:orange;
+                text-align: center;
+                font-style: italic;
+            }
+            h1{
+                color:red;
+                text-align: center;
+            }
+            h2{
+                color:red;
+                text-align: center;
+            }
+
+            h3{
+                color:red;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Front-end</h1>
+
+            <nav>
+                <ul>
+                    <li><a href ="#">Home</a></li>
+                    <li><a href ="#">About</a></li>
+                    <li><a href ="#">HTML</a></li>
+                    <li><a href = "#">CSS</a></li>
+                    <li><a href = "#">JAVASCRIPT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>WHAT IS Front end</h2>
+                <img src="./Front end.png">
+                <p  id="unique">Frontend development focuses on building the user interface and user experience of a website or web application. It involves the use of HTML to structure the content, CSS to style the elements, and JavaScript to create interactive features.</p>
+            </section>
+
+            <section>
+                <h2>HTML - HyperText Markup Language</h2>
+                <img src="./HTML.jpg">
+                <p>HTML is the standard markup language used to create web pages. It provides the structure for web content, such as headings, paragraphs, links, images, and more. HTML defines the basic layout and content of a web page.</p>
+
+                <section>
+                    <h3>History of HTML</h3>
+                    <p>HTML was created by Tim Berners-Lee in 1991 as a way to organize and link documents on the internet. It has evolved over time to support multimedia content, dynamic elements, and responsive web design.</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>CSS - Cascading Style Sheets</h2>
+                <img src="./CSS.png">
+                <p>CSS is used to style the presentation of a web page. It controls the layout, colors, fonts, and other visual elements of a page. CSS separates the content (HTML) from its design, making websites easier to maintain and modify.</p>
+                <section>
+                    <h3>History of CSS</h3>
+                    <p>CSS was introduced in 1996 to address the need for better web design control. It allowed web developers to separate the content from the design and create more flexible and dynamic layouts</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>JavaScript</h2>
+                <img src="./JAVASCRIPT.jpg">
+                <img src="./JS.png">
+                <p>JavaScript is a programming language used to create dynamic and interactive features on web pages. It allows for tasks like form validation, animations, and real-time content updates without needing to reload the page.</p>
+
+                <section>
+                    <h3>History of JavaScript</h3>
+                    <p>JavaScript was created by Brendan Eich in 1995 while working at Netscape Communications. It was initially designed to add simple interactivity to web pages but has since evolved into a full-fledged programming language used for both client-side and server-side development.</p>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+hello from text2.txt file, this is the third txt file
+text1.txt is second file
+text.txt is first txt file
+Hello

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log('Hello World')">Click</button>
+    <button onclick="sum()">Sum Two Numbers</button>
+        <script>
+
+            /*1) კომენტარებით ახსენით რა არის მოვლენა და მოვლენის მსმენელი
+                მოვლენა არის ისეთი მოქმედება რომელიც ხდება ვებ - გვერდზე მაგალითად ღილაკზე დაკლიკება
+                მოვლენის მსმენელი არის ისეთი ფუნქცია რომელიც უსმენს მოვლენას
+
+            2) შექმენით ერთი ღილაკი, რომელზე დაკლიკებისას კონსოლში გამოჩნდება "Hello World"
+
+            3) შექმენით ერთი ფუნქცია, რომელიც მომხარებელს შემოატანინებს 2 რიცხვს, ამ ფუნქციამ კონსოლში უნდა გამოიტანოს ამ ორი რიცხვის ჯამი. შექმენით ღილაკი და 
+            დაუმატეთ მას მოვლენის მსმენელი, რომელიც მოუსმენს დაკლიკებას. გადაეცით მას ეს შექმენილი ფუნქცია და დააჭირეთ ღილაკს.*/
+
+            function sum(){
+                const num1 = parseInt(prompt('Enter Number 1:'));
+                const num2 = parseInt(prompt('Enter Number 2:'));
+                console.log(num1 + num2)
+            }
+
+            sum();
+        </script>
+</body>
+</html>

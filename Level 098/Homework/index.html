@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1) გაიარეთ Higher-order-functions თავიდან ბოლომდე და iterators სეციაში გააკეთეთ სქრინშოთში მოცემული 6 სექცია, თითოეული 
+        მეთოდი რომელსაც განიხილავთ : forEach, map, filter, findIndex, გააკეთეთ თქვენით ამათი 
+        კოპიო ფუნქციები, ფუნქციების სახელები უნდა იწყებოდეს manula_ით მაგალითად: manualForEach, manualMap, manualFilter და manualFindIndex */
+
+        const manualForEach = (arr,callback) => {
+            for(let i = 0; i < arr.length;i++){
+                callback(arr[i]);
+            }
+        };
+
+        manualForEach([1,2,3,4,5,6,7,8,9,10],num => console.log(num));
+
+        let result = [];
+        const manualMap = (arr,callback) => {
+            for(let i = 0;i < arr.length; i++){
+                result.push(callback(arr[i]));
+            }
+
+            return result
+        };
+
+        const manualMapResult = manualMap([1,2,3,4,5],num => num * 2);
+        console.log(manualMapResult);
+
+        
+        let manualFilterResult = []
+
+        const manualFilter = (arr,callback) => {
+            for(let i = 0; i < arr.length;i++){
+                if(callback(arr[i]) === 'W'){
+                    manualFilterResult.push(arr[i])
+                }
+            }
+
+            return manualFilterResult
+        }
+
+        const manualFilterResult2 = manualFilter(['Wednesday','Thursday','Friday'],word => word[0]);
+        console.log(manualFilterResult2);
+
+
+
+        const manualFindIndex = (arr,callback) => {
+            for(let i = 0;i < arr.length;i++){
+                if(callback(arr[i]) === 'E'){
+                    return i
+                }else{
+                    return -1
+                }
+            }
+        }
+        const manualFindIndexResult = manualFindIndex(['Elephant','Eagle','Snail'], word => word[0])
+        console.log(manualFindIndexResult);
+    </script>
+</body>
+</html>

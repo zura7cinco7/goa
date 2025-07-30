@@ -1,0 +1,34 @@
+<!--შექმენით ვებგვერდი რომელზეც დაამატებთ თქვენთვის სასურველ ვიდეოს და აუდიოს, ორივეს მინიმუმ 3 განსხვავებული ფორომატი, 
+დაამატეთ ნასწავლი მართვის ფუნქციები (autoplay, loop, muted) თითოეული ახსენით კომენტარებით. შეასრულეთ იგივე მაგრამ გამოიყენეთ არასწორი გზა, 
+ერთ მედია თეგში რამდენიმე source თეგის ნაცვლად აიღეთ რამდენიმე 
+მედია თეგი და დაუწერეთ src ატრიბუტი. დაწერეთ განსხვავება, მიუთითეთ რომელია სწორი გზა და რატომ -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <video controls autoplay loop muted width="600">
+            <source src="5_Second_Countdown_HD (5).mp4" type="video/mp4">
+            <source src="5_Second_Countdown_HD (5).mkv" type="video/mkv">
+            <source src="5_Second_Countdown_HD (5).ogg" type="video/ogg">
+        </video>
+        <audio controls autoplay loop muted>
+            <source src="./Level 031_Classwork_5_Second_Countdown_HD (3).mp3" type="audio/mpeg">
+            <source src="./Level 031_Classwork_5_Second_Countdown_HD (3).ogg" type="audio/ogg">
+            <source src="./Level 031_Classwork_5_Second_Countdown_HD (3).wav" type="audio/wav">
+<!-- ეს გზა არის ბევრად უფრო სწორი იმიტომ რომ სტრუქტურა არის დაცული არის გამოყენებული <video> <audio> 
+თეგები სწორად და ასევე ბრაუზერი ირჩევს ფორმატს რომელსაც უჭერს მხარს -->
+        </audio>
+    </body>
+</html>
+
+<video controls autoplay loop muted width="600">
+<video src="./5_Second_Countdown_HD (5).mp4"></video>
+        <video src="./5_Second_Countdown_HD (5).mkv"></video>
+    <video src="./5_Second_Countdown_HD (5).ogg"></video> 
+<audio controls autoplay loop muted>
+    <audio src="./Level 031_Classwork_5_Second_Countdown_HD (3).mp3"></audio>
+<audio src="./Level 031_Classwork_5_Second_Countdown_HD (3).ogg"></audio>
+<audio src="./Level 031_Classwork_5_Second_Countdown_HD (3).wav"></audio>
+<!-- ეს არის არასწორი გზა იმიტომ რომ სტრუქტურა არსი დარღვეული და <source> თეგის ნაცვლად არის დაწერილი <video> და <audio> თეგები
+აკლია type იც რომ მივანიჭოთ როგორი ტიპისაა ესა თუ ის ვიდეო ან აუდიო -->

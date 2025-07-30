@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* increment არის რიცხვის გაზრდა და decrement  არის რიცხვის შემცირება 
+        4) რას გამოიტანს შემდეგი კოდი:
+            let num = 20;
+            console.log(num++) 20;
+            console.log(--num) 20;
+            console.log(++num) 21;
+            console.log(num++) 21;
+            პირველში გამოვა 20 მეორეში გამოვა 20  მესამეში 21 რადგან რიცხვი ერთით გაიზარდა  და მეოთხეში 21
+
+            მომხარებელს შემოატანინეთ მისი ასაკი და შეინახეთ ის ცვლადში. შენახული მნიშვნელობა გაზარდეთ increment ოპერატორის გამოყენებით და შეამოწმეთ, 
+            თუ ის ნაკლებია ან ტოლია 18-ზე დაბეჭდეთ "You are kid", სხვა შემთხვევაში "You are adult"*/
+            let input = parseInt(prompt("Please enter age:"));
+            console.log(++input);
+            if(input <= 18){
+                console.log('You are Kid')
+            }
+            else{
+                console.log('You are adult')
+            }
+    </script>
+</body>
+</html>

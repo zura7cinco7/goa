@@ -1,0 +1,67 @@
+<!-- შექმენით გვერდი რესტორანის მენიუსთვის, რომელიც იქნება გადანაწილებული კატეგორიებად (მაგალითად, სადილები, ძირითადი კერძები, დესერტები და ა.შ). თქვენი დავალებაა დაყოთ ეს 
+კატეგორიები სექციებად და ქვე სექციებად.(მაგალითად: ძირითადი კერძების სექციაში გააკეთეთ რამოდენიმე კერძის სექცია, სადაც ისაუბრებთ კონკრეტულ კერძებზე) გამოიყენეთ ფოტოები და
+აღწერეთ თითოეული კერძი.
+ეს საიტი აუცილებლად უნდა იყოს სწორი სტრუქტურით დალაგებული(ამისათვის დაგჭირდებათ შემდეგი სემატიკური დეგები: header, main, section, footer)
+გამოიყენეთ style ატრიბუტი და შეეცადეთ დღეს ნასწავლი მასალით გასტილოთ თქვენი საიტი. -->
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device_width,initial-scale=1.0">
+        <title>Georgian menu and dishes</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="color:green">Resturant menu</h1>
+            <p>in this resturant menu you will see a lot of delicious dishes there are a lots of options and you can choose one of them</p>
+        </header>
+
+        <main>
+            <h2 style="color:red">Suppers</h2>
+            
+            <section>
+                <p>Supper is used commonly as the term for the main evening meal, although its use varies considerably. Supper may 
+                    be used to describe a snack or light meal in the evening, either after or instead of dinner.</p>
+                <nav>
+                    <ul>
+                        <li>khinkali</li>
+                        <li>Pkhali</li>
+                    </ul>
+                </nav>
+            <form>
+                <label for="menu">Choose a dish from the menu</label>
+                <select id="menu" name="menu">
+                    <option value="Kalakuri Khinkali">Kalakuri Khinkali</option>
+                    <option value="Chakapuli">Chakapuli</option>
+                    <option value="Pkhali">Pkhali</option>
+                </select>
+            </form>
+
+            <section>
+                <img src="Khinkali.jpg" width="200px">
+                <p style="color:red"><b>Kalakuri Khinkali</b> - Khinkali is quintessential Georgian cuisine, and for good reason, for few can resist these plump dumplings made from thinly rolled dough and stuffed with tender minced meat cooked in its own juice. A variation of this dish called "kalakuri" was created when khinkali - originally a mountain village dish - arrived to the lowland cities ("kalakuri" means "city" in Georgian). It was in the cities that chopped greens began to be added to the minced meat of traditional Georgian khinkali. These greens are now the main feature of kalakuri khinkali which, thanks to this seemingly insignificant addition, acquired 
+                a spicy aroma that complements the flavor of meat with notes of light summer freshness.</p>
+            </section>
+
+            <section>
+                <img src="Chakapuli.jpg" width="200px">
+                <p style="color:red"><b>Chakapuli</b> - Chakapuli is a Georgian spring dish made from veal or lamb and many fresh herbs, onions, hot peppers and garlic. It is particularly noted for its soft, delicate texture and its bright notes of tarragon, which is added to the dish in small quantities. To make chakapuli, the ingredients are laid out in a heated pot in layers of meat, chopped greens and chopped onions which are alternated several times. During the stewing process, wine and tkemali, a green sauce made from a local plum variety, are added to the pot. When the dish is almost ready, finely chopped garlic is added to the mix. Chakapuli is served with homemade 
+                Georgian wine and freshly baked bread.</p>
+            </section>
+
+            <section>
+                <img src="Pkhali.jpg" width="200px">
+                <p style="color:red">The best Georgian foods are made with unique blends of fresh ingredients, and pkhali, a simple yet incredibly satisfying dish, is no exception. These colorful appetizers are made from boiled and chopped spinach, beets, beans or other seasonal produce, with walnuts and spices added to the main ingredient before all is ground into a blended mass. Before serving, pkhali is typically rolled into large balls which are sometimes decorated with a pomegranate seed. Pkhali is considered an appetizer and so is often served as one of the first courses, but do not underestimate its importance in Georgian cuisine! In Georgia, every housewife knows how to cook pkhali; you will find this dish on the menu of any restaurant; and not a single Georgian supra (feast) is complete without pkhali. 
+                Be sure to try this light yet filling nut-and-vegetable delight while in country.</p>
+            </section>
+            <footer>
+                <p>&copy if you are interested in more of our delicious dishes</p>
+                <p style="border:solid">contact us on number +555 555 555 555</p>
+            </footer>
+        </main>
+    </body>
+</html>
+
+
+<!-- კომენტარებით ახსენით თუ რა არის style ატრიბტუი და რისთვის გამოიყენება ის -->
+<!-- style ატრიბუტი განსაზღვრავს ელემენტის შიდა სტილს -->
+    

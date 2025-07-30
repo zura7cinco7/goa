@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Name = (prompt("Please enter name:"));
+        const Surname = (prompt('Please enter surname:'));
+        const age = parseInt(prompt('Please enter age:'));
+
+        let user = {
+            name:Name,
+            surname:Surname,
+            age:age
+        }
+
+
+
+        user.name = 'Lizi'
+
+        console.log(user);
+
+        console.log(Math.floor(2.3))
+        console.log(Math.ceil(3.5))
+        console.log(Math.round(9.9))
+        console.log(Math.trunc(5.5))
+        console.log(Math.floor(Math.random() * 10) + 1)
+
+        /*Javascript  ში ჩაშენებული ობიექტები უკვე განსაზღვრულია და აღარ საჭიროებს დამატებით შექმნას არსებობს რამდენიმე Build in objects  
+        მაგალითად boolean,string,number,Math
+        stack არის დალაგებული მეხსიერება და heap არის დაულაგებელი მეხსიერება  stack ის ზომა თავიდანვე განსაზღვრულია heap არის დიდი ზომის მეხსიერემბა stack ი არის მცირე
+        ზომის მეხსიერება
+        const me = {
+        name: "Nika",
+        age: 20
+        }
+
+        const you = me;
+        you.age = 25;
+        console.log(me.age);
+        რატომ შეიცვალა me ობიექტი?
+        me ობიექტი შეიცვალა იმიტომ რომ  you ობიექტში შეინახა me ობიექტის მისამართი*/
+
+        /* დავალება
+        1) კომენტარებით ახსენით რა არის ჩაშენებული ობიექტები JavaScript-ში. დაწერეთ ყველა ჩაშენებული ობიექტი რაც იცით.
+
+        2) კომენტარებით ახსენით რა არის stack-ი და heap-ი, რა განსხვავებაა მათ შორის, განიხილეთ მათი პლიუსები და მინუსები
+
+        3) მომხარებელს შემოატანინეთ prompt-ის დახმარებით სახელი, გვარი, ასაკი და შექმენით მათი მეშვეობით ობიექტი. დაბეჭდეთ ეს ობიექტი, შეუცვალეთ სახელის კუთვნილება და ხელახლა დაბეჭდეთ ეს ობიექტი.
+
+        4)
+        const me = {
+            name: "Nika",
+            age: 20
+            }
+
+        const you = me;
+        you.age = 25;
+        console.log(me.age);
+        რატომ შეიცვალა me ობიექტი?
+
+        5) Math ობიექტის კუთვნილებების გამოყენებით გააკეთეთ 3-3 მაგალითი(floor, ceil, round, trunc, random კუთვნილებები)*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+table,tr,td{
+    border:2px solid black;
+    width:50%
+}
+
+tr:nth-child(even){
+    background-color: yellow;
+}
+
+tr:nth-child(odd){
+    background-color: green;
+}
+
+
+ul{
+    list-style-type:square;
+    text-align: center;
+    list-style-position: inside;
+    color: red;
+}
+
+ol{
+    list-style-type:upper-alpha;
+    text-align: center;
+    list-style-position: inside;
+    list-style-image: url(Screenshot\ 2024-12-16\ 015827.png);
+    color:blue;
+}

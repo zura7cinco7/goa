@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family:"Hedvig Letters Serif", serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+main{
+    width:1150px;
+    height: 690px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-1{
+    display: flex;
+    flex-direction: row;
+    padding:30px;
+    gap:150px
+}
+
+a{
+    color:gray;
+    padding-right: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+#section-2{
+    background-image: url(background.png);
+    width:1100px;
+    height: 550px;
+    border-radius:50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    width:400px;
+}
+
+h1{
+    font-size: 30px;
+    color:white;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+p{
+    color:#EDEDED;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    background-color: #EDEDED;
+    border-radius: 5px;
+    font-size: 12px;
+    color:gray;
+    font-weight:500;
+}
+
+button:hover{
+    background-color: #D1D1D1;
+}
+
+
+

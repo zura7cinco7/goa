@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* JavaScript - ში scope განსაზღვრავს თუ რომელი ცვლადები ან ფუნქციები არის ხელმისაწვდომი კოდის კონკრეტულ ნაწილში არსებობს 
+        Global scope და local scope  - ები გლობალური scope - ი არის ხელმისაწვდომი კოდის ყველა ნაწილში მაგალითად */
+        let name = 'Nino';
+        function greet(){
+            console.log(`Hello ${name}`);
+        }
+        greet();
+        console.log(name);
+        // ამ შემთხვევაში მე შემძლია გამოვიტანო name ცვლადი console - ში ფუნქციის გარეთაც და ფუნქციაში რადგან ეს ცვლადი გლობალურია
+        // local scope - ის მაგალითი
+
+        function lastname(){
+            let user = 'Gvinjilia';
+            console.log(user);
+        }
+
+        lastname();
+        console.log(user)
+
+        /* console.log(user) ამ კოდში არის შეცდომა რადგან ჩემ მიერ შექმნილი ცვლადი არის ლოკალური შესაბამისად ეს ცვლადი მუშაობს მხოლოდ ფუნქციაში
+        და ფუნქციის გარეთ ჩემი ცვლადი ვერ მოიძებნა რადგან ის არ არის გლობალური */
+
+
+        // hoisting - ი არის პროცესი რომელიც ხდება მანამდე სანამ რაიმე ცვლადი ან უნქცია შეიმნება მაგალითად
+        text(); 
+        function text(){
+            console.log('Hello World!')
+        }
+
+        // text(); მე გამოვიძახე ფუნქცია მანამდე სანამ ის შიქმნებოდა ამას ეწოდება hoisting
+    </script>
+</body>
+</html>

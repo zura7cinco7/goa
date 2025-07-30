@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1) შექმენით ცვლადი სადაც მომხმარებელს prompt ის საშუალებით შემოატანინებთ თავის ბიუჯეტს, თუ ბიუჯეტი >= 500, კოპნსოლში გამოიტანეთ 
+        ტექსტი რომ მას გააჩნია საკმარაისი თანხა, სხვა შემთვევაში კი დაუბეჭდეთ რომ არასაკმარისი თანხა აქვს*/
+        const user = prompt('Enter Budget:');
+        /*განაგრძეთ პირველი დავალება და პირობაში შეიტანეთ ცვლილება, თუ ბიუჯეტი >= 500 და <= 1000 მხოლოდ მაშინ დაუბეჭდეთ რომ აქვს საკმარისი ბიუჯეტი*/
+        if(user >= 500 && user <= 1000){
+            console.log('You have enough money')
+        }else{
+            console.log('You dont have enough money')
+        }
+    </script>
+</body>
+</html>

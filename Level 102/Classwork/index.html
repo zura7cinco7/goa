@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="class">Hello World!</p>
+    <h1 class="class">Hello World!</h1>
+    <button class="class">Hello World!</button>
+    <p class="class">Hello World!</p>
+    <p class="class">Hello World!</p>
+
+
+    <p class="class2">Hello World!</p>
+    <p class="class2">Hello World!</p>
+    <p class="class2">Hello World!</p>
+    <p class="class2">Hello World!</p>
+    <p class="class2">Hello World!</p>
+    <script>
+        /* 1) კომენტარებით ახსენით რა არის DOM.
+
+        2) შექმენით 5 htmlшы ელემენტი, გაუწერეთ მათ ერთი და იგივე კლასი, წამოიღეთ ისინი getElementsByClassName მეთოდით 
+        და დაბეჭდეთ თითოეული მათგანი.(შეგიძლიათ გადაურაოთ for ციკლით)
+
+        3) შექმენით 5 პარაგრაფი, წამოიღეთ ისინი getElementsByTagName მეთოდით და შეუცვალეთ თითოეულ პარაგრაფს ტექსტის შიგთავსი. */
+
+        // DOM არის Document object model - დოკუმენტის ობიექტის მოდელი როდესაც website ი იტვირთება browser ი ქმნის ახალ დოკუმენტის ობიექტის მოდელს
+
+        console.log(document.getElementsByClassName('class'))
+        for(Element of document.getElementsByClassName('class')){
+            console.log(Element)
+        }
+
+        const getElement = document.getElementsByTagName('p')
+        for(let i = 0; i < getElement.length;i++){
+            getElement[i].textContent = '123'
+        }
+    </script>
+</body>
+</html>

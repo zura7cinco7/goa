@@ -1,0 +1,52 @@
+<!-- შექმენით Multi page website-ი გოაზე. საიტზე უნდა გქონდეთ რეგისტრაციის გვერდი, სადაც მომხარებელს შემოატანინებთ სახელს, გვარს, ემაილს, პაროლს, გენდერს და 
+ასევე გექნებათ drop down menu(ჩამოსაშლელი მენიუ), რომელშიც მომხარებელი აირჩევს სასურველ speed-ს(გაკვეთილების რაოდენობა კვირაში). თითოეული input-ის შეყვანა/მონიშვნა/
+არჩევა უნდა იყოს აუცილებელი.
+საიტზე უნდა გქონდეთ მთავარი გვერდი, რომელზეც გადახვალთ დარეგისტრირებისას(მოიძიეთ ეს. "ღილაკზე დაჭერისას როგორ შეიძლება გადასვლა სხვა გვერდზე"). 
+მთავარი გვერდი უნდა იყოს content-ით სავსე. ჩასვით ფოტოები და ისაუბრეთ გოაზე, რატომ ღირს ჩვენთან შემოსვლა, როგორი გარემოა, რატომ აირჩიეთ გოა და რაში დაგეხმარათ 
+ის. რა შეიცვალა თქვენს ცხოვრებაში გოაში შემოსვლით. ასევე დაამატეთ სანავიგაციო მენიუ, რომლითაც ყველა გვერდს დააკავშირებთ ერთმანეთთან.
+გამოიყენეთ ყველა ნასწავლი მასალა. მაგალითად ტექსტის ფორმატირების თეგები, სიები, სათაურები და ა.შ
+დაყავით საიტი სექციებად -->
+<html>
+    <head>
+        <meta name="description" content="About Goa-Oriented-Academy">
+        <meta name="keywords" content="Goa-Oriented-Academy and it's information">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goa-Oriented-Academy/Log in</title>
+    </head>
+    <body>
+        <form action="index 1.html">
+            <h1>Please log in/sign up for Goa-Oriented-Academy</h1>
+
+            <label for="name">Enter your name</label>
+            <input id="name" type="name" placeholder="Please enter your name" name="name" required>
+
+            <br/>
+            <label for="surname">Enter your surname</label>
+            <input id="surname" type="surname" placeholder="Please enter your surname" name="surname" required>
+
+            <br/>
+            <label for="email">Enter an email</label>
+            <input id="email" type="email" placeholder="Please enter your email" name="email" required>
+
+            <br/>
+            <label for="password">Enter your password</label>
+            <input id="password" type="password" placeholder="Please enter your password" name="password" required>
+
+            <br/>
+            <input type="radio" id="male" value="male" name="gender"/>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" value="female" name="gender"/>
+            <label for="female">Female</label>
+
+            <br/>
+            <select name="speed">
+                <option value="4" selected>Speed 4</option>
+                <option value="3">Speed 3</option>
+                <option value="2">Speed 2</option>
+                <option value="1">Speed 1</option>
+            </select>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

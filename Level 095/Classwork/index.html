@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* შექმენით while ციკლი, სადაც ყოველ იტერაციაზე მომხმარებელს შემოატანინებთ promt ის მეშვეობით რიცხს, თუ ეგ რიცხვი დაემთხვა გამოსაცნობ 
+        რიცხვს მაშინ დაუბეჭდეთ რომ პასუხი სწორია და გათიშეთ ციკლი, სხვა შემთხვევაში დაუბეჭდეთ რომ არასწორია და სცადოს თავიდან */
+        let myNumber = 10;
+        let userNum = parseInt(prompt('Enter the Number:'));
+        while(userNum !== myNumber){
+            console.log('Incorrect Number Please try again');
+            userNum = parseInt(prompt('Enter the Number again:'));
+        }
+        console.log('You win!')
+    </script>
+</body>
+</html>

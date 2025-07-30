@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1) შექმენით ფუნქცია, რომელსაც დაარქმევთ manualFilter, ამ ფუნქციას გადაეცემა ორი არგუმენტი, პირველი არის რიცხვების მასივი ხოლო მეორე არის ფუნქცია, 
+        არგუმენტ ფუნქციაში უნდა ხდებოდეს მარტივი რამე, მას გადაეცემა ერთი რიცხვი და აბრუნებს true თუ რიცხვი არის ლუწი ხოლო თუ კუენტია აბრუნებს false, 
+        manualFilter როცა მიიღებს ამ მასივს და არგუმენტად ფუნქციას, უნდა შექმნათ ცვლადი სახელად filteredArr რომელშიც დროებით შეინახავთ ცარიელ მასივს, 
+        შემდეგ გადაურაეთ რიცხვების მასივს for ციკლით და გამოიყენეთ if, if_ში გამოიძახეთ არგუყმენტი ფუნქცია და გადაეცით ამჟამინდელი რიცხვი, თუ არგუმენტი ფუნქცია 
+        დააბრუნებს true დაამატეთ ის ახალ მასივში, საბოლოოდ კი როცა მორჩება ამ ციკლის მუშაობა, manualFilter იდან დააბრუნეთ მასივი სახელად filteredArr */
+        function manualFilter(arrayNumbers,function2){
+            const filteredArr = []
+            for(let i = 0; i < arrayNumbers.length;i++){
+                if(function2(arrayNumbers[i])){
+                    filteredArr.push(arrayNumbers[i])
+                }
+            }
+
+            return filteredArr
+        }
+
+        const result = manualFilter([1,2,3,4,5,6,7,8],function(num){
+            return num % 2 === 0;
+        })
+
+        console.log(result)
+
+
+        /* 2) შექმენით ფუნქცია სახელად manualMap, რომელსაც ექნება ორი პარამეტრი სახელად arr and changer, როგორც ფილტრაციის მასივში გავაკეთეთ ანალოგიურად 
+        შექმენით მასივი სახელად changedArr რომელიც იქნება დროებით ცარიელი, გადაუარეთ გადმოცემულ მასივს და თითოეულ რიცხვზე გამოიძახეთ  changer 
+        ფუნქცია, ამ ფუნქციამ უნდა გაამრავლოს თითოეული რიცხვი 2ზე და დააბრუნოს, ხოლო დაბრუნებული მნიშვნელობა დაამატეთ changedArrში, საბოლოოდ დაბრუნეთ ეს მასივი */
+        
+         function manualMap(arr,changer){
+            const changedArr = []
+            for(let i = 0; i< arr.length;i++){
+                changedArr.push(changer(arr[i]));
+            }
+            return changedArr;
+         }
+
+         const result2 = manualMap([1,2,3],function(num){
+             return num * 2;
+        })
+
+        console.log(result2)
+    </script>
+</body>
+</html>

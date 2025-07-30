@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let me = {
+            name:'Lizi',
+            surname:'Gvinjilia',
+            age: 13
+        }
+
+        let mom = {
+            name:'Nana',
+            surname:'Chartolani',
+            age: 37
+        }
+
+        me.name = 'Nino'
+        mom.age = 36
+
+        me.studying = 'Proggraming'
+        delete me.age
+
+        console.log(me,mom)
+        console.log(me.name,me.surname,me.age,mom.name,mom.surname,mom.age);
+
+        me.greet = function(){
+            console.log('Hello World!')
+        };
+
+        me.greet();
+
+        /* ობიექტი არის კუთვნილებების კოლექცია
+        კუთვნილება არის მონაცემთა ბლოკი
+        მეთოდი არის მოქმედება რომლის შესრულებაც შეუძლია ობიექტს */
+    </script>
+</body>
+</html>
